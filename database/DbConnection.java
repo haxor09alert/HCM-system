@@ -20,13 +20,13 @@ public class DbConnection {
 
             String username = "root";
 
-            String password = "Jayandra23";
+            String password = "root";
 
             Class.forName("com.mysql.cj.jdbc.Driver");
 
             connection = DriverManager.getConnection(
 
-                    "jdbc:mysql://localhost:3306/signupdetails", username, password);
+                    "jdbc:mysql://localhost:3306/SoftwaricaDB", username, password);
 
             if (connection != null) {
 
