@@ -6,6 +6,8 @@
  *
  * @author Haxor
  */
+
+// Commet
 public class Dashboard extends javax.swing.JFrame {
 
     /**
