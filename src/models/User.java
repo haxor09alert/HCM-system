@@ -1,104 +1,63 @@
 /*
-
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
-
  */
-
 package models;
 
-
-
 /**
-
  *
-
  * @author user
-
  */
-
 public class User {
-
-    private String name;
-
-    private String email;
-
-    private String password;
-
-    private String status;
-
+    private String Name;
+    private String Email;
+    private String Password;
+    // private String status;
+    // private String string;
+    
+    
     public User(
-
-        String name,
-
-        String email,
-
-        String password,
-
-        String status
-
-    ){     
-
-  this . name  = name ;         
-  this.name  = name;
-
-        this.email = email;
-
-        this.password = password;
-
-        this.status = status;
-
+        String Name,
+        String Email,
+        String Password
+        // String status 
+    ){
+        this.Name  = Name;
+        this.Email = Email;
+        this.Password = Password;
+        // this.status = status;
     }
 
     public void setName(String newName){
-
-        this.name = newName;
-
+        this.Name = newName;
     }
 
     public String getName(){
-
-        return this.name;
-
+        return this.Name;
     }
-
     public void setEmail(String newEmail){
-
-        this.email = newEmail;
-
+        this.Email = newEmail;
     }
 
     public String getEmail(){
-
-        return this.email;
-
+        return this.Email;
     }
 
     public void setPass(String newPass){
-
-        this.password = newPass;
-
+        this.Password = newPass;
     }
 
     public String getPass(){
-
-        return this.password;
-
+        return this.Password;
     }
 
-    public void setStatus(String status){
+    // public void setStatus(String status){
+    //     this.status = status;
+    // }
 
-        this.status = status;
+    // public String getStatus(){
+    //     return this.status;
+    // }
 
-    }
-
-    public String getStatus(){
-
-        return this.status;
-
-    }
 
 }
-
-
