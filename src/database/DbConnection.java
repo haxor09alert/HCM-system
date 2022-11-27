@@ -18,19 +18,19 @@ public class DbConnection {
 
         try {
 
-            String username = "root";
+            // String username = "sql6580638";
 
-            String password = "0175";
+            // String password = "sw3ZbPsfGg";
 
             Class.forName("com.mysql.cj.jdbc.Driver");
 
             connection = DriverManager.getConnection(
 
-                    "jdbc:mysql://localhost:3306/signupdetails", username, password);
+                    "jdbc:mysql://sql6.freesqldatabase.com:3306/sql6580638","sql6580638","sw3ZbPsfGg");
 
             if (connection != null) {
 
-                System.out.println("Connected to database --> SoftwaricaDB");
+                System.out.println("Connected to database --> HealthTrack");
 
             } else {
 
@@ -38,7 +38,7 @@ public class DbConnection {
 
             }
 
-            statement = connection.createStatement();
+            // statement = connection.createStatement();
 
         } catch (Exception e) {
 
@@ -55,7 +55,7 @@ public class DbConnection {
     public int manipulate(String query) {
 
         try {
-
+            Statement statement = connection.createStatement();
             value = statement.executeUpdate(query);
 
             connection.close();

@@ -11,8 +11,7 @@ public class UserController {
         String email = user.getEmail();
         String pass = user.getPass();
 
-
-        String inserQuery = "insert into signupdetail(NAME,EMAIL,PASSWORD) "+ "values('"+name+"','"+email+"','"+pass+"')";
+        String inserQuery = "insert into signup(Name,Email,password) "+ "values('"+name+"','"+email+"','"+pass+"')";
         dbConnection = new DbConnection();
         int Result = dbConnection.manipulate(inserQuery);
         return Result;

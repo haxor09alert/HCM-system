@@ -1,5 +1,4 @@
 package view;
-
 import javax.swing.JOptionPane;
 
 import controller.UserController;
@@ -30,7 +29,7 @@ public class signup extends javax.swing.JFrame {
      */
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">                          
     private void initComponents() {
 
         jLabel3 = new javax.swing.JLabel();
@@ -153,10 +152,9 @@ public class signup extends javax.swing.JFrame {
         getContentPane().add(jPanel3);
         jPanel3.setBounds(780, 40, 390, 40);
 
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Health Track.jpg"))); // NOI18N
-        jLabel8.setText("jLabel8");
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("Health Track logo smaller.png"))); // NOI18N
         getContentPane().add(jLabel8);
-        jLabel8.setBounds(0, 50, 410, 290);
+        jLabel8.setBounds(30, 10, 230, 290);
 
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("BG frame.png"))); // NOI18N
         jLabel7.setText("jLabel7");
@@ -164,7 +162,7 @@ public class signup extends javax.swing.JFrame {
         jLabel7.setBounds(-50, -50, 1170, 810);
 
         pack();
-    }// </editor-fold>//GEN-END:initComponents
+    }// </editor-fold>                        
 
     private void nameActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_nameActionPerformed
         // TODO add your handling code here:
@@ -208,19 +206,20 @@ public class signup extends javax.swing.JFrame {
         if (a == 0) {
 
             try {
-                User s1 = new User(Name, Email, Password, null);
+                User s1 = new User(Name, Email, Password);
                 UserController sc = new UserController();
                 int insertedStudent = sc.insertDetails(s1);
 
                 if (insertedStudent > 0) {
-                    System.out.println("Student inserted");
+                    System.out.println("data inserted");
                 } else {
-                    System.out.println("Failed to insert student");
+                    System.out.println("Failed to insert data");
                 }
                 JOptionPane.showMessageDialog(null, "VALIDATION SUCCESSFUL");
             } catch (Exception e) {
                 // TODO: handle exception
                 JOptionPane.showMessageDialog(null, e);
+                System.out.printf(null,e);
             }
         }
 
@@ -269,7 +268,7 @@ public class signup extends javax.swing.JFrame {
         });
     }
 
-    // Variables declaration - do not modify//GEN-BEGIN:variables
+    // Variables declaration - do not modify                     
     private javax.swing.JButton ABOUTUS;
     private javax.swing.JButton APPOIINTMENT;
     private javax.swing.JButton LOGIN;
@@ -291,5 +290,5 @@ public class signup extends javax.swing.JFrame {
     private javax.swing.JTextField name;
     private javax.swing.JPasswordField password;
     private javax.swing.JButton signUpButton;
-    // End of variables declaration//GEN-END:variables
+    // End of variables declaration                   
 }
