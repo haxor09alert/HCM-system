@@ -1,19 +1,20 @@
+package view;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 
-package view;
 /**
  *
  * @author Maharjan
  */
-public class Dashboard extends javax.swing.JFrame {
+public class AdminDashBoard extends javax.swing.JFrame {
 
     /**
-     * Creates new form Dashboard
+     * Creates new form AdminDashBoard
      */
-    public Dashboard() {
+    public AdminDashBoard() {
         initComponents();
     }
 
@@ -30,12 +31,11 @@ public class Dashboard extends javax.swing.JFrame {
         UpdatesButton = new javax.swing.JButton();
         AboutUs = new javax.swing.JButton();
         Appointments = new javax.swing.JButton();
-        Login = new javax.swing.JButton();
+        Profile = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMinimumSize(new java.awt.Dimension(1920, 1080));
         getContentPane().setLayout(null);
 
         MenuPanel.setBackground(new java.awt.Color(123, 100, 148));
@@ -79,15 +79,15 @@ public class Dashboard extends javax.swing.JFrame {
             }
         });
 
-        Login.setBackground(new java.awt.Color(123, 100, 148));
-        Login.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 24)); // NOI18N
-        Login.setText("LOGIN");
-        Login.setBorder(null);
-        Login.setVerticalAlignment(javax.swing.SwingConstants.TOP);
-        Login.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
-        Login.addActionListener(new java.awt.event.ActionListener() {
+        Profile.setBackground(new java.awt.Color(123, 100, 148));
+        Profile.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 24)); // NOI18N
+        Profile.setText("PROFILE");
+        Profile.setBorder(null);
+        Profile.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        Profile.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
+        Profile.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                LoginActionPerformed(evt);
+                ProfileActionPerformed(evt);
             }
         });
 
@@ -103,7 +103,7 @@ public class Dashboard extends javax.swing.JFrame {
                 .addGap(63, 63, 63)
                 .addComponent(Appointments, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(41, 41, 41)
-                .addComponent(Login, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(Profile, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(47, 47, 47))
         );
         MenuPanelLayout.setVerticalGroup(
@@ -114,22 +114,22 @@ public class Dashboard extends javax.swing.JFrame {
                     .addComponent(Appointments, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(AboutUs, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 48, Short.MAX_VALUE)
                     .addComponent(UpdatesButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(Login, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(Profile, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
         getContentPane().add(MenuPanel);
-        MenuPanel.setBounds(700, 100, 840, 60);
+        MenuPanel.setBounds(710, 140, 840, 60);
 
         jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Maharjan\\Downloads\\Health Track logo smaller.png")); // NOI18N
         jLabel1.setText("jLabel1");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(20, 60, 200, 200);
+        jLabel1.setBounds(110, 70, 200, 200);
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/BG_frame.png"))); // NOI18N
-        jLabel2.setText("jLabel2");
-        getContentPane().add(jLabel2);
-        jLabel2.setBounds(0, 0, 1610, 810);
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BG_frame.png"))); // NOI18N
+        jLabel3.setText("jLabel3");
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(0, 0, 1550, 830);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -146,13 +146,13 @@ public class Dashboard extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_AppointmentsActionPerformed
 
-    private void LoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoginActionPerformed
+    private void ProfileActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ProfileActionPerformed
         // TODO add your handling code here:
-        
+
         dispose();
         Login log=new Login();
         log.show();
-    }//GEN-LAST:event_LoginActionPerformed
+    }//GEN-LAST:event_ProfileActionPerformed
 
     /**
      * @param args the command line arguments
@@ -171,20 +171,20 @@ public class Dashboard extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Dashboard.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AdminDashBoard.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Dashboard.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AdminDashBoard.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Dashboard.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AdminDashBoard.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Dashboard.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AdminDashBoard.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Dashboard().setVisible(true);
+                new AdminDashBoard().setVisible(true);
             }
         });
     }
@@ -192,10 +192,10 @@ public class Dashboard extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton AboutUs;
     private javax.swing.JButton Appointments;
-    private javax.swing.JButton Login;
     private javax.swing.JPanel MenuPanel;
+    private javax.swing.JButton Profile;
     private javax.swing.JButton UpdatesButton;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     // End of variables declaration//GEN-END:variables
 }
