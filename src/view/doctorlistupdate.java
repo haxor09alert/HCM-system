@@ -4,11 +4,6 @@
  */
 package view;
 
-import javax.swing.JOptionPane;
-
-import controller.drlistcontroller;
-import models.drlistmodel;
-
 /**
  *
  * @author user
@@ -31,94 +26,51 @@ public class doctorlistupdate extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
+        jPanel2 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
-        jPanel2 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        specialization = new javax.swing.JTextField();
-        department = new javax.swing.JTextField();
-        Dname = new javax.swing.JTextField();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        doctorTable = new javax.swing.JTable();
         jButton5 = new javax.swing.JButton();
-        jPanel4 = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        Depart = new javax.swing.JTextField();
+        firstText2 = new javax.swing.JTextField();
+        firstText1 = new javax.swing.JTextField();
+        firstText = new javax.swing.JTextField();
+        DepartText = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        bggame = new javax.swing.JPanel();
-        UPDATES = new javax.swing.JButton();
-        ABOUTUS = new javax.swing.JButton();
-        APPOIINTMENT = new javax.swing.JButton();
-        LOGIN = new javax.swing.JButton();
-        jLabel6 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-
-        jPanel1.setBackground(new java.awt.Color(204, 102, 255));
-
-        jButton1.setText("jButton1");
-
-        jButton2.setText("jButton2");
-
-        jButton3.setText("jButton3");
-
-        jButton4.setText("jButton4");
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(38, 38, 38)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(55, 55, 55)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(37, 37, 37)
-                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
-                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(46, Short.MAX_VALUE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-                        .addGap(32, 32, 32)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(14, Short.MAX_VALUE))
-        );
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        addBtn = new javax.swing.JButton();
+        jPanel3 = new javax.swing.JPanel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(1203, 680));
-        setMinimumSize(new java.awt.Dimension(1203, 680));
         getContentPane().setLayout(null);
 
-        jPanel2.setBackground(new java.awt.Color(153, 153, 255));
+        jPanel2.setBackground(new java.awt.Color(153, 102, 255));
 
-        jLabel1.setText("Specialization  ");
+        jButton1.setText("LOGIN");
 
-        jLabel2.setText("Department ");
+        jButton2.setText("ABOUT US");
 
-        jLabel3.setText("Doctor Name");
-
-        department.addActionListener(new java.awt.event.ActionListener() {
+        jButton3.setText("UPDATES");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                departmentActionPerformed(evt);
+                jButton3ActionPerformed(evt);
             }
         });
 
-        jButton5.setText("SUMMIT");
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
+        jButton4.setText("HOME");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
+                jButton4ActionPerformed(evt);
             }
         });
 
@@ -126,142 +78,321 @@ public class doctorlistupdate extends javax.swing.JFrame {
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(35, 35, 35)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, 94, Short.MAX_VALUE)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 94, Short.MAX_VALUE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(specialization, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(department, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton5)
-                    .addComponent(Dname, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(16, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addContainerGap(22, Short.MAX_VALUE)
+                .addComponent(jButton4)
+                .addGap(27, 27, 27)
+                .addComponent(jButton3)
+                .addGap(26, 26, 26)
+                .addComponent(jButton2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jButton1)
+                .addGap(23, 23, 23))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap(48, Short.MAX_VALUE)
+                .addGap(17, 17, 17)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Dname, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(32, 32, 32)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(specialization, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(39, 39, 39)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(department, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(28, 28, 28)
-                .addComponent(jButton5)
-                .addGap(24, 24, 24))
+                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(25, Short.MAX_VALUE))
         );
 
         getContentPane().add(jPanel2);
-        jPanel2.setBounds(360, 280, 360, 320);
+        jPanel2.setBounds(520, 30, 420, 90);
 
-        jPanel4.setBackground(new java.awt.Color(153, 153, 255));
+        doctorTable.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
 
-        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        jLabel4.setText("DOCTOR  LIST");
+            },
+            new String [] {
+                "D ID", "Doctor name", "Age", "Department", "Speciality"
+            }
+        ));
+        doctorTable.setGridColor(java.awt.Color.white);
+        doctorTable.setShowHorizontalLines(true);
+        doctorTable.setShowVerticalLines(true);
+        jScrollPane1.setViewportView(doctorTable);
 
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        getContentPane().add(jScrollPane1);
+        jScrollPane1.setBounds(460, 230, 452, 250);
+
+        jButton5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jButton5.setText("View Doctor");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton5);
+        jButton5.setBounds(650, 510, 160, 27);
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Health Track logo smaller.png"))); // NOI18N
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(40, 10, 210, 180);
+
+        jPanel1.setBackground(new java.awt.Color(153, 102, 255));
+
+        Depart.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        Depart.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        Depart.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                DepartFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                DepartFocusLost(evt);
+            }
+        });
+
+        firstText2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        firstText2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        firstText2.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                firstText2FocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                firstText2FocusLost(evt);
+            }
+        });
+        firstText2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                firstText2ActionPerformed(evt);
+            }
+        });
+
+        firstText1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        firstText1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        firstText1.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                firstText1FocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                firstText1FocusLost(evt);
+            }
+        });
+        firstText1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                firstText1ActionPerformed(evt);
+            }
+        });
+
+        firstText.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        firstText.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        firstText.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                firstTextFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                firstTextFocusLost(evt);
+            }
+        });
+        firstText.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                firstTextActionPerformed(evt);
+            }
+        });
+
+        DepartText.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        DepartText.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        DepartText.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                DepartTextFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                DepartTextFocusLost(evt);
+            }
+        });
+        DepartText.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DepartTextActionPerformed(evt);
+            }
+        });
+
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel3.setText("Dr. First Name");
+
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel4.setText("Dr. Age");
+
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel5.setText("Specalist");
+
+        jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel6.setText("Department");
+
+        jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel7.setText("Dr. Last Name");
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(28, 28, 28)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, 98, Short.MAX_VALUE)
+                        .addGap(18, 18, 18)
+                        .addComponent(DepartText, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, 110, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(Depart, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, 110, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(firstText1, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, 98, Short.MAX_VALUE)
+                        .addGap(18, 18, 18)
+                        .addComponent(firstText2, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(18, 18, 18)
+                        .addComponent(firstText, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap())
         );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                .addContainerGap(7, Short.MAX_VALUE)
-                .addComponent(jLabel4)
-                .addGap(21, 21, 21))
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(firstText, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel3))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(firstText1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel7))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(firstText2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel4))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Depart, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel6))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(DepartText, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel5))
+                .addGap(122, 122, 122))
         );
 
-        getContentPane().add(jPanel4);
-        jPanel4.setBounds(470, 180, 190, 60);
+        getContentPane().add(jPanel1);
+        jPanel1.setBounds(60, 270, 340, 200);
 
-        bggame.setBackground(new java.awt.Color(153, 153, 255));
-        bggame.setForeground(new java.awt.Color(153, 153, 255));
+        addBtn.setBackground(new java.awt.Color(204, 204, 204));
+        addBtn.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        addBtn.setText("Add doctor");
+        addBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addBtnActionPerformed(evt);
+            }
+        });
+        getContentPane().add(addBtn);
+        addBtn.setBounds(200, 520, 107, 27);
 
-        UPDATES.setText("UPDATES");
-        bggame.add(UPDATES);
+        jPanel3.setBackground(new java.awt.Color(153, 102, 255));
 
-        ABOUTUS.setText("ABOUT US");
-        bggame.add(ABOUTUS);
+        jLabel8.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel8.setText("Doctors List");
 
-        APPOIINTMENT.setText("APPOIINTMENT");
-        bggame.add(APPOIINTMENT);
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, 120, Short.MAX_VALUE)
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+        );
 
-        LOGIN.setText("LOGIN");
-        bggame.add(LOGIN);
+        getContentPane().add(jPanel3);
+        jPanel3.setBounds(180, 200, 120, 50);
 
-        getContentPane().add(bggame);
-        bggame.setBounds(800, 40, 390, 40);
-
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Health Track logo smaller.png"))); // NOI18N
-        jLabel6.setText("jLabel6");
-        getContentPane().add(jLabel6);
-        jLabel6.setBounds(100, 80, 200, 210);
-
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/BG frame.png"))); // NOI18N
-        getContentPane().add(jLabel5);
-        jLabel5.setBounds(1, 0, 1190, 675);
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/BG frame.png"))); // NOI18N
+        jLabel1.setText("jLabel1");
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(20, 0, 1080, 660);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void departmentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_departmentActionPerformed
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_departmentActionPerformed
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void firstTextFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_firstTextFocusGained
+        // TODO add your handling code here:
+    }//GEN-LAST:event_firstTextFocusGained
+
+    private void firstTextFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_firstTextFocusLost
+        // TODO add your handling code here:
+    }//GEN-LAST:event_firstTextFocusLost
+
+    private void firstTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_firstTextActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_firstTextActionPerformed
+
+    private void firstText1FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_firstText1FocusGained
+        // TODO add your handling code here:
+    }//GEN-LAST:event_firstText1FocusGained
+
+    private void firstText1FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_firstText1FocusLost
+        // TODO add your handling code here:
+    }//GEN-LAST:event_firstText1FocusLost
+
+    private void firstText1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_firstText1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_firstText1ActionPerformed
+
+    private void firstText2FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_firstText2FocusGained
+        // TODO add your handling code here:
+    }//GEN-LAST:event_firstText2FocusGained
+
+    private void firstText2FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_firstText2FocusLost
+        // TODO add your handling code here:
+    }//GEN-LAST:event_firstText2FocusLost
+
+    private void firstText2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_firstText2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_firstText2ActionPerformed
+
+    private void DepartTextFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_DepartTextFocusGained
+        // TODO add your handling code here:
+    }//GEN-LAST:event_DepartTextFocusGained
+
+    private void DepartTextFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_DepartTextFocusLost
+        // TODO add your handling code here:
+    }//GEN-LAST:event_DepartTextFocusLost
+
+    private void DepartFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_DepartFocusGained
+        // TODO add your handling code here:
+    }//GEN-LAST:event_DepartFocusGained
+
+    private void DepartFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_DepartFocusLost
+        // TODO add your handling code here:
+    }//GEN-LAST:event_DepartFocusLost
+
+    private void DepartTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DepartTextActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_DepartTextActionPerformed
+
+    private void addBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addBtnActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_addBtnActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-
         // TODO add your handling code here:
-        String DName=Dname.getText();
-        String Department=department.getText();
-        String Specialization=specialization.getText();
-        int a=0;
-        if (DName.equals("")){
-            JOptionPane.showMessageDialog(null, "Doctor Name is missing");
-            a=1;
-        }
-        if (Specialization.equals("")){
-            JOptionPane.showMessageDialog(null, "Specialization is missing");
-            a=1;
-        }
-        if (Department.equals("")){
-            JOptionPane.showMessageDialog(null, "Department is missing");
-            a=1;
-        }
-        
-        if (a==0){
-            
-            try {
-                drlistmodel s1 = new drlistmodel(DName,Specialization,Department,0);
-                drlistcontroller sc = new drlistcontroller();
-                int insertedStudent = sc.insertDetails(s1);
-
-                if (insertedStudent > 0) {
-                    System.out.println("data inserted");
-                } else {
-                    System.out.println("Failed to insert data");
-                }
-                JOptionPane.showMessageDialog(null, "VALIDATION SUCCESSFUL");
-            } catch (Exception e) {
-                // TODO: handle exception
-                JOptionPane.showMessageDialog(null, e);
-                System.out.printf(null,e);
-            }
-        }
-        
     }//GEN-LAST:event_jButton5ActionPerformed
 
     /**
@@ -300,13 +431,13 @@ public class doctorlistupdate extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton ABOUTUS;
-    private javax.swing.JButton APPOIINTMENT;
-    private javax.swing.JTextField Dname;
-    private javax.swing.JButton LOGIN;
-    private javax.swing.JButton UPDATES;
-    private javax.swing.JPanel bggame;
-    private javax.swing.JTextField department;
+    private javax.swing.JTextField Depart;
+    private javax.swing.JTextField DepartText;
+    private javax.swing.JButton addBtn;
+    private javax.swing.JTable doctorTable;
+    private javax.swing.JTextField firstText;
+    private javax.swing.JTextField firstText1;
+    private javax.swing.JTextField firstText2;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
@@ -318,9 +449,11 @@ public class doctorlistupdate extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel4;
-    private javax.swing.JTextField specialization;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
 }
