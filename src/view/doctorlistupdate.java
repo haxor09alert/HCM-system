@@ -4,6 +4,13 @@
  */
 package view;
 
+import javax.swing.JOptionPane;
+import models.drlistmodel;
+import controller.drlistcontroller;
+import database.DbConnection;
+import java.sql.ResultSet;
+import net.proteanit.sql.DbUtils;
+
 /**
  *
  * @author user
@@ -32,15 +39,15 @@ public class doctorlistupdate extends javax.swing.JFrame {
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        doctorTable = new javax.swing.JTable();
+        DTable = new javax.swing.JTable();
         jButton5 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         Depart = new javax.swing.JTextField();
-        firstText2 = new javax.swing.JTextField();
-        firstText1 = new javax.swing.JTextField();
-        firstText = new javax.swing.JTextField();
-        DepartText = new javax.swing.JTextField();
+        age = new javax.swing.JTextField();
+        lname = new javax.swing.JTextField();
+        fname = new javax.swing.JTextField();
+        special = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
@@ -102,9 +109,9 @@ public class doctorlistupdate extends javax.swing.JFrame {
         );
 
         getContentPane().add(jPanel2);
-        jPanel2.setBounds(520, 30, 420, 90);
+        jPanel2.setBounds(660, 30, 420, 90);
 
-        doctorTable.setModel(new javax.swing.table.DefaultTableModel(
+        DTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
@@ -112,13 +119,13 @@ public class doctorlistupdate extends javax.swing.JFrame {
                 "D ID", "Doctor name", "Age", "Department", "Speciality"
             }
         ));
-        doctorTable.setGridColor(java.awt.Color.white);
-        doctorTable.setShowHorizontalLines(true);
-        doctorTable.setShowVerticalLines(true);
-        jScrollPane1.setViewportView(doctorTable);
+        DTable.setGridColor(java.awt.Color.white);
+        DTable.setShowHorizontalLines(true);
+        DTable.setShowVerticalLines(true);
+        jScrollPane1.setViewportView(DTable);
 
         getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(460, 230, 452, 250);
+        jScrollPane1.setBounds(530, 200, 510, 270);
 
         jButton5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jButton5.setText("View Doctor");
@@ -128,7 +135,7 @@ public class doctorlistupdate extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton5);
-        jButton5.setBounds(650, 510, 160, 27);
+        jButton5.setBounds(760, 530, 160, 27);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Health Track logo smaller.png"))); // NOI18N
         getContentPane().add(jLabel2);
@@ -147,67 +154,67 @@ public class doctorlistupdate extends javax.swing.JFrame {
             }
         });
 
-        firstText2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        firstText2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        firstText2.addFocusListener(new java.awt.event.FocusAdapter() {
+        age.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        age.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        age.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
-                firstText2FocusGained(evt);
+                ageFocusGained(evt);
             }
             public void focusLost(java.awt.event.FocusEvent evt) {
-                firstText2FocusLost(evt);
+                ageFocusLost(evt);
             }
         });
-        firstText2.addActionListener(new java.awt.event.ActionListener() {
+        age.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                firstText2ActionPerformed(evt);
+                ageActionPerformed(evt);
             }
         });
 
-        firstText1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        firstText1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        firstText1.addFocusListener(new java.awt.event.FocusAdapter() {
+        lname.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        lname.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        lname.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
-                firstText1FocusGained(evt);
+                lnameFocusGained(evt);
             }
             public void focusLost(java.awt.event.FocusEvent evt) {
-                firstText1FocusLost(evt);
+                lnameFocusLost(evt);
             }
         });
-        firstText1.addActionListener(new java.awt.event.ActionListener() {
+        lname.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                firstText1ActionPerformed(evt);
+                lnameActionPerformed(evt);
             }
         });
 
-        firstText.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        firstText.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        firstText.addFocusListener(new java.awt.event.FocusAdapter() {
+        fname.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        fname.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        fname.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
-                firstTextFocusGained(evt);
+                fnameFocusGained(evt);
             }
             public void focusLost(java.awt.event.FocusEvent evt) {
-                firstTextFocusLost(evt);
+                fnameFocusLost(evt);
             }
         });
-        firstText.addActionListener(new java.awt.event.ActionListener() {
+        fname.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                firstTextActionPerformed(evt);
+                fnameActionPerformed(evt);
             }
         });
 
-        DepartText.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        DepartText.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        DepartText.addFocusListener(new java.awt.event.FocusAdapter() {
+        special.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        special.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        special.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
-                DepartTextFocusGained(evt);
+                specialFocusGained(evt);
             }
             public void focusLost(java.awt.event.FocusEvent evt) {
-                DepartTextFocusLost(evt);
+                specialFocusLost(evt);
             }
         });
-        DepartText.addActionListener(new java.awt.event.ActionListener() {
+        special.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                DepartTextActionPerformed(evt);
+                specialActionPerformed(evt);
             }
         });
 
@@ -236,7 +243,7 @@ public class doctorlistupdate extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, 98, Short.MAX_VALUE)
                         .addGap(18, 18, 18)
-                        .addComponent(DepartText, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(special, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, 110, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -244,15 +251,15 @@ public class doctorlistupdate extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, 110, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(firstText1, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(lname, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, 98, Short.MAX_VALUE)
                         .addGap(18, 18, 18)
-                        .addComponent(firstText2, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(age, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGap(18, 18, 18)
-                        .addComponent(firstText, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(fname, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -260,15 +267,15 @@ public class doctorlistupdate extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(firstText, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(fname, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel3))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(firstText1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lname, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel7))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(firstText2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(age, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel4))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -276,13 +283,13 @@ public class doctorlistupdate extends javax.swing.JFrame {
                     .addComponent(jLabel6))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(DepartText, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(special, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel5))
                 .addGap(122, 122, 122))
         );
 
         getContentPane().add(jPanel1);
-        jPanel1.setBounds(60, 270, 340, 200);
+        jPanel1.setBounds(70, 320, 340, 200);
 
         addBtn.setBackground(new java.awt.Color(204, 204, 204));
         addBtn.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -293,7 +300,7 @@ public class doctorlistupdate extends javax.swing.JFrame {
             }
         });
         getContentPane().add(addBtn);
-        addBtn.setBounds(200, 520, 107, 27);
+        addBtn.setBounds(210, 550, 107, 27);
 
         jPanel3.setBackground(new java.awt.Color(153, 102, 255));
 
@@ -304,15 +311,20 @@ public class doctorlistupdate extends javax.swing.JFrame {
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, 120, Short.MAX_VALUE)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 6, Short.MAX_VALUE))
         );
 
         getContentPane().add(jPanel3);
-        jPanel3.setBounds(180, 200, 120, 50);
+        jPanel3.setBounds(180, 250, 120, 50);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/BG frame.png"))); // NOI18N
         jLabel1.setText("jLabel1");
@@ -330,49 +342,49 @@ public class doctorlistupdate extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton4ActionPerformed
 
-    private void firstTextFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_firstTextFocusGained
+    private void fnameFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_fnameFocusGained
         // TODO add your handling code here:
-    }//GEN-LAST:event_firstTextFocusGained
+    }//GEN-LAST:event_fnameFocusGained
 
-    private void firstTextFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_firstTextFocusLost
+    private void fnameFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_fnameFocusLost
         // TODO add your handling code here:
-    }//GEN-LAST:event_firstTextFocusLost
+    }//GEN-LAST:event_fnameFocusLost
 
-    private void firstTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_firstTextActionPerformed
+    private void fnameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fnameActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_firstTextActionPerformed
+    }//GEN-LAST:event_fnameActionPerformed
 
-    private void firstText1FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_firstText1FocusGained
+    private void lnameFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_lnameFocusGained
         // TODO add your handling code here:
-    }//GEN-LAST:event_firstText1FocusGained
+    }//GEN-LAST:event_lnameFocusGained
 
-    private void firstText1FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_firstText1FocusLost
+    private void lnameFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_lnameFocusLost
         // TODO add your handling code here:
-    }//GEN-LAST:event_firstText1FocusLost
+    }//GEN-LAST:event_lnameFocusLost
 
-    private void firstText1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_firstText1ActionPerformed
+    private void lnameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lnameActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_firstText1ActionPerformed
+    }//GEN-LAST:event_lnameActionPerformed
 
-    private void firstText2FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_firstText2FocusGained
+    private void ageFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_ageFocusGained
         // TODO add your handling code here:
-    }//GEN-LAST:event_firstText2FocusGained
+    }//GEN-LAST:event_ageFocusGained
 
-    private void firstText2FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_firstText2FocusLost
+    private void ageFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_ageFocusLost
         // TODO add your handling code here:
-    }//GEN-LAST:event_firstText2FocusLost
+    }//GEN-LAST:event_ageFocusLost
 
-    private void firstText2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_firstText2ActionPerformed
+    private void ageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ageActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_firstText2ActionPerformed
+    }//GEN-LAST:event_ageActionPerformed
 
-    private void DepartTextFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_DepartTextFocusGained
+    private void specialFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_specialFocusGained
         // TODO add your handling code here:
-    }//GEN-LAST:event_DepartTextFocusGained
+    }//GEN-LAST:event_specialFocusGained
 
-    private void DepartTextFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_DepartTextFocusLost
+    private void specialFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_specialFocusLost
         // TODO add your handling code here:
-    }//GEN-LAST:event_DepartTextFocusLost
+    }//GEN-LAST:event_specialFocusLost
 
     private void DepartFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_DepartFocusGained
         // TODO add your handling code here:
@@ -382,17 +394,85 @@ public class doctorlistupdate extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_DepartFocusLost
 
-    private void DepartTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DepartTextActionPerformed
+    private void specialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_specialActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_DepartTextActionPerformed
+    }//GEN-LAST:event_specialActionPerformed
 
     private void addBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addBtnActionPerformed
-        // TODO add your handling code here:
+    String Fname=fname.getText();
+    String Lname=lname.getText();
+    String Age = age.getText();
+    String Depatment=Depart.getText();
+    String Special=special.getText();
+    String id=null;
+    int a = 0;
+    if (Fname.equals("")){
+        JOptionPane.showMessageDialog(null, "FNAME IS MISSING.");
+            a = 1;
+    }
+    if (Lname.equals("")){
+        JOptionPane.showMessageDialog(null, "LNAME IS MISSING.");
+            a = 1;
+    }
+    if (Age.equals("")){
+        JOptionPane.showMessageDialog(null, "Age IS MISSING.");
+            a = 1;
+    }
+    if (Depatment.equals("")){
+        JOptionPane.showMessageDialog(null, "Depatment IS MISSING.");
+            a = 1;
+    }
+    if (Special.equals("")){
+        JOptionPane.showMessageDialog(null, "Specialization IS MISSING.");
+            a = 1;
+    }
+    if (a==0){
+        try{
+            drlistmodel d1= new drlistmodel(0,Fname,Lname,Age, Depatment,Special);
+//            drlistcontroller 
+            drlistcontroller sc = new drlistcontroller();
+            int insertdoctor = sc.insertdetails(d1);
+
+                if (insertdoctor > 0) {
+                    System.out.println("data inserted");
+                } else {
+                    System.out.println("Failed to insert data");
+                }
+                JOptionPane.showMessageDialog(null, "VALIDATION SUCCESSFUL");
+                
+            } 
+        catch (Exception e) {
+                // TODO: handle exception
+                JOptionPane.showMessageDialog(null, e);
+                System.out.printf(null,e);
+            }
+            
+        }
+    
+    // TODO add your handling code here:
         
     }//GEN-LAST:event_addBtnActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        // TODO add your handling code here:
+    
+        
+        String query="select doctor_id, CONCAT(fname,' ',lname) as Name,age,department,specialist from doctor";
+        
+        DbConnection dbConnection = new DbConnection();
+        ResultSet result = dbConnection.retrieve(query);
+        
+        DTable.setModel(DbUtils.resultSetToTableModel(result));
+        
+        
+        
+        
+        
+        
+   
+
+
+
+         // TODO add your handling code here:
     }//GEN-LAST:event_jButton5ActionPerformed
 
     /**
@@ -431,13 +511,11 @@ public class doctorlistupdate extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public javax.swing.JTable DTable;
     private javax.swing.JTextField Depart;
-    private javax.swing.JTextField DepartText;
     private javax.swing.JButton addBtn;
-    private javax.swing.JTable doctorTable;
-    private javax.swing.JTextField firstText;
-    private javax.swing.JTextField firstText1;
-    private javax.swing.JTextField firstText2;
+    private javax.swing.JTextField age;
+    private javax.swing.JTextField fname;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
@@ -455,5 +533,7 @@ public class doctorlistupdate extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextField lname;
+    private javax.swing.JTextField special;
     // End of variables declaration//GEN-END:variables
 }
