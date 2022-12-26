@@ -1,7 +1,9 @@
+package view;
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
+
 
 
 import java.sql.ResultSet;
@@ -237,7 +239,8 @@ public class Login extends javax.swing.JFrame {
     private void LoginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoginButtonActionPerformed
         // TODO add your handling code here:
         try {
-
+            
+            
             User u1 = new User(null, emailText.getText(), new String(passwordText.getPassword()),null);
             UserController uc = new UserController();
             ResultSet loginresult = uc.selectDetails(u1);
