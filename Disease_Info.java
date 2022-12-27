@@ -82,11 +82,11 @@ public class Disease_Info extends javax.swing.JFrame {
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(9, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         getContentPane().add(jPanel5);
-        jPanel5.setBounds(350, 110, 350, 50);
+        jPanel5.setBounds(380, 130, 350, 50);
 
         jPanel1.setBackground(new java.awt.Color(204, 204, 255));
 
@@ -302,7 +302,7 @@ public class Disease_Info extends javax.swing.JFrame {
         );
 
         getContentPane().add(jPanel4);
-        jPanel4.setBounds(510, 10, 410, 46);
+        jPanel4.setBounds(560, 10, 410, 46);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/healthtrack/Health Track logo smaller.png"))); // NOI18N
         getContentPane().add(jLabel1);
