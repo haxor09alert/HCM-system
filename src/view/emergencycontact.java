@@ -129,6 +129,70 @@ public class emergencycontact extends javax.swing.JFrame {
         jLabel85 = new javax.swing.JLabel();
         jLabel86 = new javax.swing.JLabel();
         jLabel35 = new javax.swing.JLabel();
+        jPanel31 = new javax.swing.JPanel();
+        jLabel148 = new javax.swing.JLabel();
+        jLabel149 = new javax.swing.JLabel();
+        jLabel201 = new javax.swing.JLabel();
+        jLabel202 = new javax.swing.JLabel();
+        jLabel203 = new javax.swing.JLabel();
+        jLabel204 = new javax.swing.JLabel();
+        jPanel32 = new javax.swing.JPanel();
+        jLabel205 = new javax.swing.JLabel();
+        jLabel206 = new javax.swing.JLabel();
+        jLabel207 = new javax.swing.JLabel();
+        jLabel208 = new javax.swing.JLabel();
+        jLabel209 = new javax.swing.JLabel();
+        jLabel210 = new javax.swing.JLabel();
+        jLabel211 = new javax.swing.JLabel();
+        jPanel33 = new javax.swing.JPanel();
+        jLabel212 = new javax.swing.JLabel();
+        jLabel213 = new javax.swing.JLabel();
+        jLabel214 = new javax.swing.JLabel();
+        jLabel215 = new javax.swing.JLabel();
+        jLabel216 = new javax.swing.JLabel();
+        jLabel217 = new javax.swing.JLabel();
+        jLabel218 = new javax.swing.JLabel();
+        jPanel34 = new javax.swing.JPanel();
+        jLabel219 = new javax.swing.JLabel();
+        jLabel220 = new javax.swing.JLabel();
+        jLabel221 = new javax.swing.JLabel();
+        jLabel222 = new javax.swing.JLabel();
+        jLabel223 = new javax.swing.JLabel();
+        jLabel224 = new javax.swing.JLabel();
+        jLabel225 = new javax.swing.JLabel();
+        jPanel35 = new javax.swing.JPanel();
+        jLabel226 = new javax.swing.JLabel();
+        jLabel227 = new javax.swing.JLabel();
+        jLabel228 = new javax.swing.JLabel();
+        jLabel229 = new javax.swing.JLabel();
+        jLabel230 = new javax.swing.JLabel();
+        jLabel231 = new javax.swing.JLabel();
+        jLabel232 = new javax.swing.JLabel();
+        jPanel36 = new javax.swing.JPanel();
+        jLabel233 = new javax.swing.JLabel();
+        jLabel234 = new javax.swing.JLabel();
+        jLabel235 = new javax.swing.JLabel();
+        jLabel236 = new javax.swing.JLabel();
+        jLabel237 = new javax.swing.JLabel();
+        jLabel238 = new javax.swing.JLabel();
+        jLabel239 = new javax.swing.JLabel();
+        jPanel37 = new javax.swing.JPanel();
+        jLabel240 = new javax.swing.JLabel();
+        jLabel241 = new javax.swing.JLabel();
+        jLabel242 = new javax.swing.JLabel();
+        jLabel243 = new javax.swing.JLabel();
+        jLabel244 = new javax.swing.JLabel();
+        jLabel245 = new javax.swing.JLabel();
+        jLabel246 = new javax.swing.JLabel();
+        jPanel38 = new javax.swing.JPanel();
+        jLabel247 = new javax.swing.JLabel();
+        jLabel248 = new javax.swing.JLabel();
+        jLabel249 = new javax.swing.JLabel();
+        jLabel250 = new javax.swing.JLabel();
+        jLabel251 = new javax.swing.JLabel();
+        jLabel252 = new javax.swing.JLabel();
+        jLabel253 = new javax.swing.JLabel();
+        jLabel254 = new javax.swing.JLabel();
         jPanel23 = new javax.swing.JPanel();
         jLabel143 = new javax.swing.JLabel();
         jLabel144 = new javax.swing.JLabel();
@@ -257,6 +321,134 @@ public class emergencycontact extends javax.swing.JFrame {
         jLabel141 = new javax.swing.JLabel();
         jLabel142 = new javax.swing.JLabel();
         jLabel199 = new javax.swing.JLabel();
+        jPanel39 = new javax.swing.JPanel();
+        jLabel255 = new javax.swing.JLabel();
+        jLabel256 = new javax.swing.JLabel();
+        jLabel257 = new javax.swing.JLabel();
+        jLabel258 = new javax.swing.JLabel();
+        jLabel259 = new javax.swing.JLabel();
+        jLabel260 = new javax.swing.JLabel();
+        jPanel40 = new javax.swing.JPanel();
+        jLabel261 = new javax.swing.JLabel();
+        jLabel262 = new javax.swing.JLabel();
+        jLabel263 = new javax.swing.JLabel();
+        jLabel264 = new javax.swing.JLabel();
+        jLabel265 = new javax.swing.JLabel();
+        jLabel266 = new javax.swing.JLabel();
+        jLabel267 = new javax.swing.JLabel();
+        jPanel41 = new javax.swing.JPanel();
+        jLabel268 = new javax.swing.JLabel();
+        jLabel269 = new javax.swing.JLabel();
+        jLabel270 = new javax.swing.JLabel();
+        jLabel271 = new javax.swing.JLabel();
+        jLabel272 = new javax.swing.JLabel();
+        jLabel273 = new javax.swing.JLabel();
+        jLabel274 = new javax.swing.JLabel();
+        jPanel42 = new javax.swing.JPanel();
+        jLabel275 = new javax.swing.JLabel();
+        jLabel276 = new javax.swing.JLabel();
+        jLabel277 = new javax.swing.JLabel();
+        jLabel278 = new javax.swing.JLabel();
+        jLabel279 = new javax.swing.JLabel();
+        jLabel280 = new javax.swing.JLabel();
+        jLabel281 = new javax.swing.JLabel();
+        jPanel43 = new javax.swing.JPanel();
+        jLabel282 = new javax.swing.JLabel();
+        jLabel283 = new javax.swing.JLabel();
+        jLabel284 = new javax.swing.JLabel();
+        jLabel285 = new javax.swing.JLabel();
+        jLabel286 = new javax.swing.JLabel();
+        jLabel287 = new javax.swing.JLabel();
+        jLabel288 = new javax.swing.JLabel();
+        jPanel44 = new javax.swing.JPanel();
+        jLabel289 = new javax.swing.JLabel();
+        jLabel290 = new javax.swing.JLabel();
+        jLabel291 = new javax.swing.JLabel();
+        jLabel292 = new javax.swing.JLabel();
+        jLabel293 = new javax.swing.JLabel();
+        jLabel294 = new javax.swing.JLabel();
+        jLabel295 = new javax.swing.JLabel();
+        jPanel45 = new javax.swing.JPanel();
+        jLabel296 = new javax.swing.JLabel();
+        jLabel297 = new javax.swing.JLabel();
+        jLabel298 = new javax.swing.JLabel();
+        jLabel299 = new javax.swing.JLabel();
+        jLabel300 = new javax.swing.JLabel();
+        jLabel301 = new javax.swing.JLabel();
+        jLabel302 = new javax.swing.JLabel();
+        jPanel46 = new javax.swing.JPanel();
+        jLabel303 = new javax.swing.JLabel();
+        jLabel304 = new javax.swing.JLabel();
+        jLabel305 = new javax.swing.JLabel();
+        jLabel306 = new javax.swing.JLabel();
+        jLabel307 = new javax.swing.JLabel();
+        jLabel308 = new javax.swing.JLabel();
+        jLabel309 = new javax.swing.JLabel();
+        jLabel310 = new javax.swing.JLabel();
+        jPanel47 = new javax.swing.JPanel();
+        jLabel311 = new javax.swing.JLabel();
+        jLabel312 = new javax.swing.JLabel();
+        jLabel313 = new javax.swing.JLabel();
+        jLabel314 = new javax.swing.JLabel();
+        jLabel315 = new javax.swing.JLabel();
+        jLabel316 = new javax.swing.JLabel();
+        jPanel48 = new javax.swing.JPanel();
+        jLabel317 = new javax.swing.JLabel();
+        jLabel318 = new javax.swing.JLabel();
+        jLabel319 = new javax.swing.JLabel();
+        jLabel320 = new javax.swing.JLabel();
+        jLabel321 = new javax.swing.JLabel();
+        jLabel322 = new javax.swing.JLabel();
+        jLabel323 = new javax.swing.JLabel();
+        jPanel49 = new javax.swing.JPanel();
+        jLabel324 = new javax.swing.JLabel();
+        jLabel325 = new javax.swing.JLabel();
+        jLabel326 = new javax.swing.JLabel();
+        jLabel327 = new javax.swing.JLabel();
+        jLabel328 = new javax.swing.JLabel();
+        jLabel329 = new javax.swing.JLabel();
+        jLabel330 = new javax.swing.JLabel();
+        jPanel50 = new javax.swing.JPanel();
+        jLabel331 = new javax.swing.JLabel();
+        jLabel332 = new javax.swing.JLabel();
+        jLabel333 = new javax.swing.JLabel();
+        jLabel334 = new javax.swing.JLabel();
+        jLabel335 = new javax.swing.JLabel();
+        jLabel336 = new javax.swing.JLabel();
+        jLabel337 = new javax.swing.JLabel();
+        jPanel51 = new javax.swing.JPanel();
+        jLabel338 = new javax.swing.JLabel();
+        jLabel339 = new javax.swing.JLabel();
+        jLabel340 = new javax.swing.JLabel();
+        jLabel341 = new javax.swing.JLabel();
+        jLabel342 = new javax.swing.JLabel();
+        jLabel343 = new javax.swing.JLabel();
+        jLabel344 = new javax.swing.JLabel();
+        jPanel52 = new javax.swing.JPanel();
+        jLabel345 = new javax.swing.JLabel();
+        jLabel346 = new javax.swing.JLabel();
+        jLabel347 = new javax.swing.JLabel();
+        jLabel348 = new javax.swing.JLabel();
+        jLabel349 = new javax.swing.JLabel();
+        jLabel350 = new javax.swing.JLabel();
+        jLabel351 = new javax.swing.JLabel();
+        jPanel53 = new javax.swing.JPanel();
+        jLabel352 = new javax.swing.JLabel();
+        jLabel353 = new javax.swing.JLabel();
+        jLabel354 = new javax.swing.JLabel();
+        jLabel355 = new javax.swing.JLabel();
+        jLabel356 = new javax.swing.JLabel();
+        jLabel357 = new javax.swing.JLabel();
+        jLabel358 = new javax.swing.JLabel();
+        jPanel54 = new javax.swing.JPanel();
+        jLabel359 = new javax.swing.JLabel();
+        jLabel360 = new javax.swing.JLabel();
+        jLabel361 = new javax.swing.JLabel();
+        jLabel362 = new javax.swing.JLabel();
+        jLabel363 = new javax.swing.JLabel();
+        jLabel364 = new javax.swing.JLabel();
+        jLabel365 = new javax.swing.JLabel();
+        jLabel366 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -312,23 +504,25 @@ public class emergencycontact extends javax.swing.JFrame {
         getContentPane().add(jPanel2);
         jPanel2.setBounds(680, 40, 420, 90);
 
-        jPanel1.setBackground(new java.awt.Color(204, 102, 255));
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(null);
 
         jLabel3.setFont(new java.awt.Font("Cambria", 1, 48)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 51, 51));
         jLabel3.setText("Emergency Contact");
         jPanel1.add(jLabel3);
-        jLabel3.setBounds(10, 20, 440, 70);
+        jLabel3.setBounds(10, 0, 440, 70);
 
         getContentPane().add(jPanel1);
-        jPanel1.setBounds(210, 120, 450, 100);
+        jPanel1.setBounds(210, 150, 450, 70);
 
         jPanel3.setBackground(new java.awt.Color(153, 102, 255));
         jPanel3.setLayout(null);
 
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel2.setText("Goverment Health Center ");
         jPanel3.add(jLabel2);
-        jLabel2.setBounds(50, 10, 140, 16);
+        jLabel2.setBounds(80, 10, 200, 20);
 
         jLabel4.setText("Contact:");
         jPanel3.add(jLabel4);
@@ -338,7 +532,7 @@ public class emergencycontact extends javax.swing.JFrame {
         jPanel3.add(jLabel5);
         jLabel5.setBounds(30, 80, 32, 16);
 
-        jLabel6.setText("website :");
+        jLabel6.setText("Website :");
         jPanel3.add(jLabel6);
         jLabel6.setBounds(30, 100, 60, 16);
 
@@ -457,14 +651,15 @@ public class emergencycontact extends javax.swing.JFrame {
         jPanel4.setBounds(110, 300, 240, 150);
 
         getContentPane().add(jPanel3);
-        jPanel3.setBounds(70, 250, 290, 150);
+        jPanel3.setBounds(50, 250, 290, 150);
 
         jPanel7.setBackground(new java.awt.Color(153, 102, 255));
         jPanel7.setLayout(null);
 
-        jLabel31.setText("Grande Hospital");
+        jLabel31.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel31.setText("Rapid Health Service");
         jPanel7.add(jLabel31);
-        jLabel31.setBounds(50, 10, 140, 16);
+        jLabel31.setBounds(50, 10, 170, 20);
 
         jLabel32.setText("Contact:");
         jPanel7.add(jLabel32);
@@ -472,19 +667,19 @@ public class emergencycontact extends javax.swing.JFrame {
 
         jLabel33.setText("Email:");
         jPanel7.add(jLabel33);
-        jLabel33.setBounds(30, 80, 32, 16);
+        jLabel33.setBounds(30, 70, 32, 20);
 
-        jLabel34.setText("website :");
+        jLabel34.setText("Website :");
         jPanel7.add(jLabel34);
-        jLabel34.setBounds(30, 100, 60, 16);
+        jLabel34.setBounds(30, 90, 60, 16);
 
-        jLabel36.setText("grandehospital@gmail.com");
+        jLabel36.setText("Rapidhealthnp@gmail.com");
         jPanel7.add(jLabel36);
         jLabel36.setBounds(110, 70, 150, 16);
 
-        jLabel37.setText("www.GrandeHospital.np.com");
+        jLabel37.setText("www.Rapidhealth.np.com");
         jPanel7.add(jLabel37);
-        jLabel37.setBounds(110, 100, 160, 16);
+        jLabel37.setBounds(100, 80, 160, 30);
 
         jPanel8.setBackground(new java.awt.Color(153, 102, 255));
         jPanel8.setLayout(null);
@@ -728,15 +923,289 @@ public class emergencycontact extends javax.swing.JFrame {
         jPanel7.add(jLabel35);
         jLabel35.setBounds(110, 50, 120, 16);
 
+        jPanel31.setBackground(new java.awt.Color(153, 102, 255));
+        jPanel31.setLayout(null);
+
+        jLabel148.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel148.setText("Grande Hospital");
+        jPanel31.add(jLabel148);
+        jLabel148.setBounds(50, 10, 140, 20);
+
+        jLabel149.setText("Contact:");
+        jPanel31.add(jLabel149);
+        jLabel149.setBounds(30, 50, 50, 16);
+
+        jLabel201.setText("Email:");
+        jPanel31.add(jLabel201);
+        jLabel201.setBounds(30, 70, 32, 20);
+
+        jLabel202.setText("Website :");
+        jPanel31.add(jLabel202);
+        jLabel202.setBounds(30, 90, 60, 16);
+
+        jLabel203.setText("grandehospital@gmail.com");
+        jPanel31.add(jLabel203);
+        jLabel203.setBounds(110, 70, 150, 16);
+
+        jLabel204.setText("www.GrandeHospital.np.com");
+        jPanel31.add(jLabel204);
+        jLabel204.setBounds(100, 80, 160, 30);
+
+        jPanel32.setBackground(new java.awt.Color(153, 102, 255));
+        jPanel32.setLayout(null);
+
+        jLabel205.setText("Goverment Health Center ");
+        jPanel32.add(jLabel205);
+        jLabel205.setBounds(50, 10, 140, 16);
+
+        jLabel206.setText("Contact:");
+        jPanel32.add(jLabel206);
+        jLabel206.setBounds(30, 60, 50, 16);
+
+        jLabel207.setText("Email:");
+        jPanel32.add(jLabel207);
+        jLabel207.setBounds(30, 80, 32, 16);
+
+        jLabel208.setText("website :");
+        jPanel32.add(jLabel208);
+        jLabel208.setBounds(30, 100, 60, 16);
+
+        jLabel209.setText("jLabel7");
+        jPanel32.add(jLabel209);
+        jLabel209.setBounds(110, 50, 37, 16);
+
+        jLabel210.setText("jLabel8");
+        jPanel32.add(jLabel210);
+        jLabel210.setBounds(110, 80, 38, 16);
+
+        jLabel211.setText("jLabel9");
+        jPanel32.add(jLabel211);
+        jLabel211.setBounds(110, 100, 38, 16);
+
+        jPanel33.setBackground(new java.awt.Color(153, 102, 255));
+        jPanel33.setLayout(null);
+
+        jLabel212.setText("Goverment Health Center ");
+        jPanel33.add(jLabel212);
+        jLabel212.setBounds(50, 10, 140, 16);
+
+        jLabel213.setText("Contact:");
+        jPanel33.add(jLabel213);
+        jLabel213.setBounds(30, 60, 50, 16);
+
+        jLabel214.setText("Email:");
+        jPanel33.add(jLabel214);
+        jLabel214.setBounds(30, 80, 32, 16);
+
+        jLabel215.setText("website :");
+        jPanel33.add(jLabel215);
+        jLabel215.setBounds(30, 100, 60, 16);
+
+        jLabel216.setText("jLabel7");
+        jPanel33.add(jLabel216);
+        jLabel216.setBounds(110, 50, 37, 16);
+
+        jLabel217.setText("jLabel8");
+        jPanel33.add(jLabel217);
+        jLabel217.setBounds(110, 80, 38, 16);
+
+        jLabel218.setText("jLabel9");
+        jPanel33.add(jLabel218);
+        jLabel218.setBounds(110, 100, 38, 16);
+
+        jPanel34.setBackground(new java.awt.Color(153, 102, 255));
+        jPanel34.setLayout(null);
+
+        jLabel219.setText("Goverment Health Center ");
+        jPanel34.add(jLabel219);
+        jLabel219.setBounds(50, 10, 140, 16);
+
+        jLabel220.setText("Contact:");
+        jPanel34.add(jLabel220);
+        jLabel220.setBounds(30, 60, 50, 16);
+
+        jLabel221.setText("Email:");
+        jPanel34.add(jLabel221);
+        jLabel221.setBounds(30, 80, 32, 16);
+
+        jLabel222.setText("website :");
+        jPanel34.add(jLabel222);
+        jLabel222.setBounds(30, 100, 60, 16);
+
+        jLabel223.setText("jLabel7");
+        jPanel34.add(jLabel223);
+        jLabel223.setBounds(110, 50, 37, 16);
+
+        jLabel224.setText("jLabel8");
+        jPanel34.add(jLabel224);
+        jLabel224.setBounds(110, 80, 38, 16);
+
+        jLabel225.setText("jLabel9");
+        jPanel34.add(jLabel225);
+        jLabel225.setBounds(110, 100, 38, 16);
+
+        jPanel33.add(jPanel34);
+        jPanel34.setBounds(110, 300, 240, 150);
+
+        jPanel32.add(jPanel33);
+        jPanel33.setBounds(110, 300, 240, 150);
+
+        jPanel31.add(jPanel32);
+        jPanel32.setBounds(110, 300, 240, 150);
+
+        jPanel35.setBackground(new java.awt.Color(153, 102, 255));
+        jPanel35.setLayout(null);
+
+        jLabel226.setText("Goverment Health Center ");
+        jPanel35.add(jLabel226);
+        jLabel226.setBounds(50, 10, 140, 16);
+
+        jLabel227.setText("Contact:");
+        jPanel35.add(jLabel227);
+        jLabel227.setBounds(30, 60, 50, 16);
+
+        jLabel228.setText("Email:");
+        jPanel35.add(jLabel228);
+        jLabel228.setBounds(30, 80, 32, 16);
+
+        jLabel229.setText("website :");
+        jPanel35.add(jLabel229);
+        jLabel229.setBounds(30, 100, 60, 16);
+
+        jLabel230.setText("jLabel7");
+        jPanel35.add(jLabel230);
+        jLabel230.setBounds(110, 50, 37, 16);
+
+        jLabel231.setText("jLabel8");
+        jPanel35.add(jLabel231);
+        jLabel231.setBounds(110, 80, 38, 16);
+
+        jLabel232.setText("jLabel9");
+        jPanel35.add(jLabel232);
+        jLabel232.setBounds(110, 100, 38, 16);
+
+        jPanel36.setBackground(new java.awt.Color(153, 102, 255));
+        jPanel36.setLayout(null);
+
+        jLabel233.setText("Goverment Health Center ");
+        jPanel36.add(jLabel233);
+        jLabel233.setBounds(50, 10, 140, 16);
+
+        jLabel234.setText("Contact:");
+        jPanel36.add(jLabel234);
+        jLabel234.setBounds(30, 60, 50, 16);
+
+        jLabel235.setText("Email:");
+        jPanel36.add(jLabel235);
+        jLabel235.setBounds(30, 80, 32, 16);
+
+        jLabel236.setText("website :");
+        jPanel36.add(jLabel236);
+        jLabel236.setBounds(30, 100, 60, 16);
+
+        jLabel237.setText("jLabel7");
+        jPanel36.add(jLabel237);
+        jLabel237.setBounds(110, 50, 37, 16);
+
+        jLabel238.setText("jLabel8");
+        jPanel36.add(jLabel238);
+        jLabel238.setBounds(110, 80, 38, 16);
+
+        jLabel239.setText("jLabel9");
+        jPanel36.add(jLabel239);
+        jLabel239.setBounds(110, 100, 38, 16);
+
+        jPanel37.setBackground(new java.awt.Color(153, 102, 255));
+        jPanel37.setLayout(null);
+
+        jLabel240.setText("Goverment Health Center ");
+        jPanel37.add(jLabel240);
+        jLabel240.setBounds(50, 10, 140, 16);
+
+        jLabel241.setText("Contact:");
+        jPanel37.add(jLabel241);
+        jLabel241.setBounds(30, 60, 50, 16);
+
+        jLabel242.setText("Email:");
+        jPanel37.add(jLabel242);
+        jLabel242.setBounds(30, 80, 32, 16);
+
+        jLabel243.setText("website :");
+        jPanel37.add(jLabel243);
+        jLabel243.setBounds(30, 100, 60, 16);
+
+        jLabel244.setText("jLabel7");
+        jPanel37.add(jLabel244);
+        jLabel244.setBounds(110, 50, 37, 16);
+
+        jLabel245.setText("jLabel8");
+        jPanel37.add(jLabel245);
+        jLabel245.setBounds(110, 80, 38, 16);
+
+        jLabel246.setText("jLabel9");
+        jPanel37.add(jLabel246);
+        jLabel246.setBounds(110, 100, 38, 16);
+
+        jPanel38.setBackground(new java.awt.Color(153, 102, 255));
+        jPanel38.setLayout(null);
+
+        jLabel247.setText("Goverment Health Center ");
+        jPanel38.add(jLabel247);
+        jLabel247.setBounds(50, 10, 140, 16);
+
+        jLabel248.setText("Contact:");
+        jPanel38.add(jLabel248);
+        jLabel248.setBounds(30, 60, 50, 16);
+
+        jLabel249.setText("Email:");
+        jPanel38.add(jLabel249);
+        jLabel249.setBounds(30, 80, 32, 16);
+
+        jLabel250.setText("website :");
+        jPanel38.add(jLabel250);
+        jLabel250.setBounds(30, 100, 60, 16);
+
+        jLabel251.setText("jLabel7");
+        jPanel38.add(jLabel251);
+        jLabel251.setBounds(110, 50, 37, 16);
+
+        jLabel252.setText("jLabel8");
+        jPanel38.add(jLabel252);
+        jLabel252.setBounds(110, 80, 38, 16);
+
+        jLabel253.setText("jLabel9");
+        jPanel38.add(jLabel253);
+        jLabel253.setBounds(110, 100, 38, 16);
+
+        jPanel37.add(jPanel38);
+        jPanel38.setBounds(110, 300, 240, 150);
+
+        jPanel36.add(jPanel37);
+        jPanel37.setBounds(110, 300, 240, 150);
+
+        jPanel35.add(jPanel36);
+        jPanel36.setBounds(110, 300, 240, 150);
+
+        jPanel31.add(jPanel35);
+        jPanel35.setBounds(230, 350, 240, 150);
+
+        jLabel254.setText("01-5001245");
+        jPanel31.add(jLabel254);
+        jLabel254.setBounds(110, 50, 120, 16);
+
+        jPanel7.add(jPanel31);
+        jPanel31.setBounds(540, 250, 270, 150);
+
         getContentPane().add(jPanel7);
-        jPanel7.setBounds(540, 250, 270, 150);
+        jPanel7.setBounds(800, 250, 270, 150);
 
         jPanel23.setBackground(new java.awt.Color(153, 102, 255));
         jPanel23.setLayout(null);
 
-        jLabel143.setText("Ambluence");
+        jLabel143.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel143.setText("Ambulance");
         jPanel23.add(jLabel143);
-        jLabel143.setBounds(50, 10, 140, 16);
+        jLabel143.setBounds(90, 20, 140, 16);
 
         jLabel144.setText("Contact:");
         jPanel23.add(jLabel144);
@@ -1001,14 +1470,15 @@ public class emergencycontact extends javax.swing.JFrame {
         jLabel200.setBounds(100, 100, 120, 16);
 
         getContentPane().add(jPanel23);
-        jPanel23.setBounds(280, 430, 290, 150);
+        jPanel23.setBounds(220, 430, 290, 150);
 
         jPanel15.setBackground(new java.awt.Color(153, 102, 255));
         jPanel15.setLayout(null);
 
-        jLabel87.setText("Bhaktpur  hospital");
+        jLabel87.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel87.setText("Bhaktpur  Hospital");
         jPanel15.add(jLabel87);
-        jLabel87.setBounds(50, 10, 140, 16);
+        jLabel87.setBounds(80, 20, 140, 16);
 
         jLabel88.setText("Contact:");
         jPanel15.add(jLabel88);
@@ -1016,19 +1486,19 @@ public class emergencycontact extends javax.swing.JFrame {
 
         jLabel89.setText("Email:");
         jPanel15.add(jLabel89);
-        jLabel89.setBounds(30, 80, 32, 16);
+        jLabel89.setBounds(30, 70, 32, 16);
 
         jLabel90.setText("website :");
         jPanel15.add(jLabel90);
-        jLabel90.setBounds(30, 100, 60, 16);
+        jLabel90.setBounds(30, 90, 60, 16);
 
         jLabel92.setText("bhaktpurhospital@gmail.com");
         jPanel15.add(jLabel92);
-        jLabel92.setBounds(110, 80, 180, 16);
+        jLabel92.setBounds(100, 70, 180, 16);
 
         jLabel93.setText("www.bhaktpurhospital.com");
         jPanel15.add(jLabel93);
-        jLabel93.setBounds(110, 100, 144, 16);
+        jLabel93.setBounds(100, 90, 147, 16);
 
         jPanel16.setBackground(new java.awt.Color(153, 102, 255));
         jPanel16.setLayout(null);
@@ -1273,12 +1743,558 @@ public class emergencycontact extends javax.swing.JFrame {
         jLabel199.setBounds(100, 50, 120, 16);
 
         getContentPane().add(jPanel15);
-        jPanel15.setBounds(730, 420, 290, 150);
+        jPanel15.setBounds(660, 430, 290, 150);
+
+        jPanel39.setBackground(new java.awt.Color(153, 102, 255));
+        jPanel39.setLayout(null);
+
+        jLabel255.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel255.setText("Grande Hospital");
+        jPanel39.add(jLabel255);
+        jLabel255.setBounds(50, 10, 140, 20);
+
+        jLabel256.setText("Contact:");
+        jPanel39.add(jLabel256);
+        jLabel256.setBounds(30, 50, 50, 16);
+
+        jLabel257.setText("Email:");
+        jPanel39.add(jLabel257);
+        jLabel257.setBounds(30, 70, 32, 20);
+
+        jLabel258.setText("Website :");
+        jPanel39.add(jLabel258);
+        jLabel258.setBounds(30, 90, 60, 16);
+
+        jLabel259.setText("grandehospital@gmail.com");
+        jPanel39.add(jLabel259);
+        jLabel259.setBounds(110, 70, 150, 16);
+
+        jLabel260.setText("www.GrandeHospital.np.com");
+        jPanel39.add(jLabel260);
+        jLabel260.setBounds(100, 80, 160, 30);
+
+        jPanel40.setBackground(new java.awt.Color(153, 102, 255));
+        jPanel40.setLayout(null);
+
+        jLabel261.setText("Goverment Health Center ");
+        jPanel40.add(jLabel261);
+        jLabel261.setBounds(50, 10, 140, 16);
+
+        jLabel262.setText("Contact:");
+        jPanel40.add(jLabel262);
+        jLabel262.setBounds(30, 60, 50, 16);
+
+        jLabel263.setText("Email:");
+        jPanel40.add(jLabel263);
+        jLabel263.setBounds(30, 80, 32, 16);
+
+        jLabel264.setText("website :");
+        jPanel40.add(jLabel264);
+        jLabel264.setBounds(30, 100, 60, 16);
+
+        jLabel265.setText("jLabel7");
+        jPanel40.add(jLabel265);
+        jLabel265.setBounds(110, 50, 37, 16);
+
+        jLabel266.setText("jLabel8");
+        jPanel40.add(jLabel266);
+        jLabel266.setBounds(110, 80, 38, 16);
+
+        jLabel267.setText("jLabel9");
+        jPanel40.add(jLabel267);
+        jLabel267.setBounds(110, 100, 38, 16);
+
+        jPanel41.setBackground(new java.awt.Color(153, 102, 255));
+        jPanel41.setLayout(null);
+
+        jLabel268.setText("Goverment Health Center ");
+        jPanel41.add(jLabel268);
+        jLabel268.setBounds(50, 10, 140, 16);
+
+        jLabel269.setText("Contact:");
+        jPanel41.add(jLabel269);
+        jLabel269.setBounds(30, 60, 50, 16);
+
+        jLabel270.setText("Email:");
+        jPanel41.add(jLabel270);
+        jLabel270.setBounds(30, 80, 32, 16);
+
+        jLabel271.setText("website :");
+        jPanel41.add(jLabel271);
+        jLabel271.setBounds(30, 100, 60, 16);
+
+        jLabel272.setText("jLabel7");
+        jPanel41.add(jLabel272);
+        jLabel272.setBounds(110, 50, 37, 16);
+
+        jLabel273.setText("jLabel8");
+        jPanel41.add(jLabel273);
+        jLabel273.setBounds(110, 80, 38, 16);
+
+        jLabel274.setText("jLabel9");
+        jPanel41.add(jLabel274);
+        jLabel274.setBounds(110, 100, 38, 16);
+
+        jPanel42.setBackground(new java.awt.Color(153, 102, 255));
+        jPanel42.setLayout(null);
+
+        jLabel275.setText("Goverment Health Center ");
+        jPanel42.add(jLabel275);
+        jLabel275.setBounds(50, 10, 140, 16);
+
+        jLabel276.setText("Contact:");
+        jPanel42.add(jLabel276);
+        jLabel276.setBounds(30, 60, 50, 16);
+
+        jLabel277.setText("Email:");
+        jPanel42.add(jLabel277);
+        jLabel277.setBounds(30, 80, 32, 16);
+
+        jLabel278.setText("website :");
+        jPanel42.add(jLabel278);
+        jLabel278.setBounds(30, 100, 60, 16);
+
+        jLabel279.setText("jLabel7");
+        jPanel42.add(jLabel279);
+        jLabel279.setBounds(110, 50, 37, 16);
+
+        jLabel280.setText("jLabel8");
+        jPanel42.add(jLabel280);
+        jLabel280.setBounds(110, 80, 38, 16);
+
+        jLabel281.setText("jLabel9");
+        jPanel42.add(jLabel281);
+        jLabel281.setBounds(110, 100, 38, 16);
+
+        jPanel41.add(jPanel42);
+        jPanel42.setBounds(110, 300, 240, 150);
+
+        jPanel40.add(jPanel41);
+        jPanel41.setBounds(110, 300, 240, 150);
+
+        jPanel39.add(jPanel40);
+        jPanel40.setBounds(110, 300, 240, 150);
+
+        jPanel43.setBackground(new java.awt.Color(153, 102, 255));
+        jPanel43.setLayout(null);
+
+        jLabel282.setText("Goverment Health Center ");
+        jPanel43.add(jLabel282);
+        jLabel282.setBounds(50, 10, 140, 16);
+
+        jLabel283.setText("Contact:");
+        jPanel43.add(jLabel283);
+        jLabel283.setBounds(30, 60, 50, 16);
+
+        jLabel284.setText("Email:");
+        jPanel43.add(jLabel284);
+        jLabel284.setBounds(30, 80, 32, 16);
+
+        jLabel285.setText("website :");
+        jPanel43.add(jLabel285);
+        jLabel285.setBounds(30, 100, 60, 16);
+
+        jLabel286.setText("jLabel7");
+        jPanel43.add(jLabel286);
+        jLabel286.setBounds(110, 50, 37, 16);
+
+        jLabel287.setText("jLabel8");
+        jPanel43.add(jLabel287);
+        jLabel287.setBounds(110, 80, 38, 16);
+
+        jLabel288.setText("jLabel9");
+        jPanel43.add(jLabel288);
+        jLabel288.setBounds(110, 100, 38, 16);
+
+        jPanel44.setBackground(new java.awt.Color(153, 102, 255));
+        jPanel44.setLayout(null);
+
+        jLabel289.setText("Goverment Health Center ");
+        jPanel44.add(jLabel289);
+        jLabel289.setBounds(50, 10, 140, 16);
+
+        jLabel290.setText("Contact:");
+        jPanel44.add(jLabel290);
+        jLabel290.setBounds(30, 60, 50, 16);
+
+        jLabel291.setText("Email:");
+        jPanel44.add(jLabel291);
+        jLabel291.setBounds(30, 80, 32, 16);
+
+        jLabel292.setText("website :");
+        jPanel44.add(jLabel292);
+        jLabel292.setBounds(30, 100, 60, 16);
+
+        jLabel293.setText("jLabel7");
+        jPanel44.add(jLabel293);
+        jLabel293.setBounds(110, 50, 37, 16);
+
+        jLabel294.setText("jLabel8");
+        jPanel44.add(jLabel294);
+        jLabel294.setBounds(110, 80, 38, 16);
+
+        jLabel295.setText("jLabel9");
+        jPanel44.add(jLabel295);
+        jLabel295.setBounds(110, 100, 38, 16);
+
+        jPanel45.setBackground(new java.awt.Color(153, 102, 255));
+        jPanel45.setLayout(null);
+
+        jLabel296.setText("Goverment Health Center ");
+        jPanel45.add(jLabel296);
+        jLabel296.setBounds(50, 10, 140, 16);
+
+        jLabel297.setText("Contact:");
+        jPanel45.add(jLabel297);
+        jLabel297.setBounds(30, 60, 50, 16);
+
+        jLabel298.setText("Email:");
+        jPanel45.add(jLabel298);
+        jLabel298.setBounds(30, 80, 32, 16);
+
+        jLabel299.setText("website :");
+        jPanel45.add(jLabel299);
+        jLabel299.setBounds(30, 100, 60, 16);
+
+        jLabel300.setText("jLabel7");
+        jPanel45.add(jLabel300);
+        jLabel300.setBounds(110, 50, 37, 16);
+
+        jLabel301.setText("jLabel8");
+        jPanel45.add(jLabel301);
+        jLabel301.setBounds(110, 80, 38, 16);
+
+        jLabel302.setText("jLabel9");
+        jPanel45.add(jLabel302);
+        jLabel302.setBounds(110, 100, 38, 16);
+
+        jPanel46.setBackground(new java.awt.Color(153, 102, 255));
+        jPanel46.setLayout(null);
+
+        jLabel303.setText("Goverment Health Center ");
+        jPanel46.add(jLabel303);
+        jLabel303.setBounds(50, 10, 140, 16);
+
+        jLabel304.setText("Contact:");
+        jPanel46.add(jLabel304);
+        jLabel304.setBounds(30, 60, 50, 16);
+
+        jLabel305.setText("Email:");
+        jPanel46.add(jLabel305);
+        jLabel305.setBounds(30, 80, 32, 16);
+
+        jLabel306.setText("website :");
+        jPanel46.add(jLabel306);
+        jLabel306.setBounds(30, 100, 60, 16);
+
+        jLabel307.setText("jLabel7");
+        jPanel46.add(jLabel307);
+        jLabel307.setBounds(110, 50, 37, 16);
+
+        jLabel308.setText("jLabel8");
+        jPanel46.add(jLabel308);
+        jLabel308.setBounds(110, 80, 38, 16);
+
+        jLabel309.setText("jLabel9");
+        jPanel46.add(jLabel309);
+        jLabel309.setBounds(110, 100, 38, 16);
+
+        jPanel45.add(jPanel46);
+        jPanel46.setBounds(110, 300, 240, 150);
+
+        jPanel44.add(jPanel45);
+        jPanel45.setBounds(110, 300, 240, 150);
+
+        jPanel43.add(jPanel44);
+        jPanel44.setBounds(110, 300, 240, 150);
+
+        jPanel39.add(jPanel43);
+        jPanel43.setBounds(230, 350, 240, 150);
+
+        jLabel310.setText("01-5001245");
+        jPanel39.add(jLabel310);
+        jLabel310.setBounds(110, 50, 120, 16);
+
+        jPanel47.setBackground(new java.awt.Color(153, 102, 255));
+        jPanel47.setLayout(null);
+
+        jLabel311.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel311.setText("Grande Hospital");
+        jPanel47.add(jLabel311);
+        jLabel311.setBounds(50, 10, 140, 20);
+
+        jLabel312.setText("Contact:");
+        jPanel47.add(jLabel312);
+        jLabel312.setBounds(30, 50, 50, 16);
+
+        jLabel313.setText("Email:");
+        jPanel47.add(jLabel313);
+        jLabel313.setBounds(30, 70, 32, 20);
+
+        jLabel314.setText("Website :");
+        jPanel47.add(jLabel314);
+        jLabel314.setBounds(30, 90, 60, 16);
+
+        jLabel315.setText("grandehospital@gmail.com");
+        jPanel47.add(jLabel315);
+        jLabel315.setBounds(110, 70, 150, 16);
+
+        jLabel316.setText("www.GrandeHospital.np.com");
+        jPanel47.add(jLabel316);
+        jLabel316.setBounds(100, 80, 160, 30);
+
+        jPanel48.setBackground(new java.awt.Color(153, 102, 255));
+        jPanel48.setLayout(null);
+
+        jLabel317.setText("Goverment Health Center ");
+        jPanel48.add(jLabel317);
+        jLabel317.setBounds(50, 10, 140, 16);
+
+        jLabel318.setText("Contact:");
+        jPanel48.add(jLabel318);
+        jLabel318.setBounds(30, 60, 50, 16);
+
+        jLabel319.setText("Email:");
+        jPanel48.add(jLabel319);
+        jLabel319.setBounds(30, 80, 32, 16);
+
+        jLabel320.setText("website :");
+        jPanel48.add(jLabel320);
+        jLabel320.setBounds(30, 100, 60, 16);
+
+        jLabel321.setText("jLabel7");
+        jPanel48.add(jLabel321);
+        jLabel321.setBounds(110, 50, 37, 16);
+
+        jLabel322.setText("jLabel8");
+        jPanel48.add(jLabel322);
+        jLabel322.setBounds(110, 80, 38, 16);
+
+        jLabel323.setText("jLabel9");
+        jPanel48.add(jLabel323);
+        jLabel323.setBounds(110, 100, 38, 16);
+
+        jPanel49.setBackground(new java.awt.Color(153, 102, 255));
+        jPanel49.setLayout(null);
+
+        jLabel324.setText("Goverment Health Center ");
+        jPanel49.add(jLabel324);
+        jLabel324.setBounds(50, 10, 140, 16);
+
+        jLabel325.setText("Contact:");
+        jPanel49.add(jLabel325);
+        jLabel325.setBounds(30, 60, 50, 16);
+
+        jLabel326.setText("Email:");
+        jPanel49.add(jLabel326);
+        jLabel326.setBounds(30, 80, 32, 16);
+
+        jLabel327.setText("website :");
+        jPanel49.add(jLabel327);
+        jLabel327.setBounds(30, 100, 60, 16);
+
+        jLabel328.setText("jLabel7");
+        jPanel49.add(jLabel328);
+        jLabel328.setBounds(110, 50, 37, 16);
+
+        jLabel329.setText("jLabel8");
+        jPanel49.add(jLabel329);
+        jLabel329.setBounds(110, 80, 38, 16);
+
+        jLabel330.setText("jLabel9");
+        jPanel49.add(jLabel330);
+        jLabel330.setBounds(110, 100, 38, 16);
+
+        jPanel50.setBackground(new java.awt.Color(153, 102, 255));
+        jPanel50.setLayout(null);
+
+        jLabel331.setText("Goverment Health Center ");
+        jPanel50.add(jLabel331);
+        jLabel331.setBounds(50, 10, 140, 16);
+
+        jLabel332.setText("Contact:");
+        jPanel50.add(jLabel332);
+        jLabel332.setBounds(30, 60, 50, 16);
+
+        jLabel333.setText("Email:");
+        jPanel50.add(jLabel333);
+        jLabel333.setBounds(30, 80, 32, 16);
+
+        jLabel334.setText("website :");
+        jPanel50.add(jLabel334);
+        jLabel334.setBounds(30, 100, 60, 16);
+
+        jLabel335.setText("jLabel7");
+        jPanel50.add(jLabel335);
+        jLabel335.setBounds(110, 50, 37, 16);
+
+        jLabel336.setText("jLabel8");
+        jPanel50.add(jLabel336);
+        jLabel336.setBounds(110, 80, 38, 16);
+
+        jLabel337.setText("jLabel9");
+        jPanel50.add(jLabel337);
+        jLabel337.setBounds(110, 100, 38, 16);
+
+        jPanel49.add(jPanel50);
+        jPanel50.setBounds(110, 300, 240, 150);
+
+        jPanel48.add(jPanel49);
+        jPanel49.setBounds(110, 300, 240, 150);
+
+        jPanel47.add(jPanel48);
+        jPanel48.setBounds(110, 300, 240, 150);
+
+        jPanel51.setBackground(new java.awt.Color(153, 102, 255));
+        jPanel51.setLayout(null);
+
+        jLabel338.setText("Goverment Health Center ");
+        jPanel51.add(jLabel338);
+        jLabel338.setBounds(50, 10, 140, 16);
+
+        jLabel339.setText("Contact:");
+        jPanel51.add(jLabel339);
+        jLabel339.setBounds(30, 60, 50, 16);
+
+        jLabel340.setText("Email:");
+        jPanel51.add(jLabel340);
+        jLabel340.setBounds(30, 80, 32, 16);
+
+        jLabel341.setText("website :");
+        jPanel51.add(jLabel341);
+        jLabel341.setBounds(30, 100, 60, 16);
+
+        jLabel342.setText("jLabel7");
+        jPanel51.add(jLabel342);
+        jLabel342.setBounds(110, 50, 37, 16);
+
+        jLabel343.setText("jLabel8");
+        jPanel51.add(jLabel343);
+        jLabel343.setBounds(110, 80, 38, 16);
+
+        jLabel344.setText("jLabel9");
+        jPanel51.add(jLabel344);
+        jLabel344.setBounds(110, 100, 38, 16);
+
+        jPanel52.setBackground(new java.awt.Color(153, 102, 255));
+        jPanel52.setLayout(null);
+
+        jLabel345.setText("Goverment Health Center ");
+        jPanel52.add(jLabel345);
+        jLabel345.setBounds(50, 10, 140, 16);
+
+        jLabel346.setText("Contact:");
+        jPanel52.add(jLabel346);
+        jLabel346.setBounds(30, 60, 50, 16);
+
+        jLabel347.setText("Email:");
+        jPanel52.add(jLabel347);
+        jLabel347.setBounds(30, 80, 32, 16);
+
+        jLabel348.setText("website :");
+        jPanel52.add(jLabel348);
+        jLabel348.setBounds(30, 100, 60, 16);
+
+        jLabel349.setText("jLabel7");
+        jPanel52.add(jLabel349);
+        jLabel349.setBounds(110, 50, 37, 16);
+
+        jLabel350.setText("jLabel8");
+        jPanel52.add(jLabel350);
+        jLabel350.setBounds(110, 80, 38, 16);
+
+        jLabel351.setText("jLabel9");
+        jPanel52.add(jLabel351);
+        jLabel351.setBounds(110, 100, 38, 16);
+
+        jPanel53.setBackground(new java.awt.Color(153, 102, 255));
+        jPanel53.setLayout(null);
+
+        jLabel352.setText("Goverment Health Center ");
+        jPanel53.add(jLabel352);
+        jLabel352.setBounds(50, 10, 140, 16);
+
+        jLabel353.setText("Contact:");
+        jPanel53.add(jLabel353);
+        jLabel353.setBounds(30, 60, 50, 16);
+
+        jLabel354.setText("Email:");
+        jPanel53.add(jLabel354);
+        jLabel354.setBounds(30, 80, 32, 16);
+
+        jLabel355.setText("website :");
+        jPanel53.add(jLabel355);
+        jLabel355.setBounds(30, 100, 60, 16);
+
+        jLabel356.setText("jLabel7");
+        jPanel53.add(jLabel356);
+        jLabel356.setBounds(110, 50, 37, 16);
+
+        jLabel357.setText("jLabel8");
+        jPanel53.add(jLabel357);
+        jLabel357.setBounds(110, 80, 38, 16);
+
+        jLabel358.setText("jLabel9");
+        jPanel53.add(jLabel358);
+        jLabel358.setBounds(110, 100, 38, 16);
+
+        jPanel54.setBackground(new java.awt.Color(153, 102, 255));
+        jPanel54.setLayout(null);
+
+        jLabel359.setText("Goverment Health Center ");
+        jPanel54.add(jLabel359);
+        jLabel359.setBounds(50, 10, 140, 16);
+
+        jLabel360.setText("Contact:");
+        jPanel54.add(jLabel360);
+        jLabel360.setBounds(30, 60, 50, 16);
+
+        jLabel361.setText("Email:");
+        jPanel54.add(jLabel361);
+        jLabel361.setBounds(30, 80, 32, 16);
+
+        jLabel362.setText("website :");
+        jPanel54.add(jLabel362);
+        jLabel362.setBounds(30, 100, 60, 16);
+
+        jLabel363.setText("jLabel7");
+        jPanel54.add(jLabel363);
+        jLabel363.setBounds(110, 50, 37, 16);
+
+        jLabel364.setText("jLabel8");
+        jPanel54.add(jLabel364);
+        jLabel364.setBounds(110, 80, 38, 16);
+
+        jLabel365.setText("jLabel9");
+        jPanel54.add(jLabel365);
+        jLabel365.setBounds(110, 100, 38, 16);
+
+        jPanel53.add(jPanel54);
+        jPanel54.setBounds(110, 300, 240, 150);
+
+        jPanel52.add(jPanel53);
+        jPanel53.setBounds(110, 300, 240, 150);
+
+        jPanel51.add(jPanel52);
+        jPanel52.setBounds(110, 300, 240, 150);
+
+        jPanel47.add(jPanel51);
+        jPanel51.setBounds(230, 350, 240, 150);
+
+        jLabel366.setText("01-5001245");
+        jPanel47.add(jLabel366);
+        jLabel366.setBounds(110, 50, 120, 16);
+
+        jPanel39.add(jPanel47);
+        jPanel47.setBounds(540, 250, 270, 150);
+
+        getContentPane().add(jPanel39);
+        jPanel39.setBounds(430, 250, 270, 150);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/BG frame.png"))); // NOI18N
         jLabel1.setText("jLabel1");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(0, 0, 1100, 600);
+        jLabel1.setBounds(0, 10, 1100, 600);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -1385,6 +2401,8 @@ public class emergencycontact extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel145;
     private javax.swing.JLabel jLabel146;
     private javax.swing.JLabel jLabel147;
+    private javax.swing.JLabel jLabel148;
+    private javax.swing.JLabel jLabel149;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel150;
     private javax.swing.JLabel jLabel151;
@@ -1443,23 +2461,189 @@ public class emergencycontact extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel200;
+    private javax.swing.JLabel jLabel201;
+    private javax.swing.JLabel jLabel202;
+    private javax.swing.JLabel jLabel203;
+    private javax.swing.JLabel jLabel204;
+    private javax.swing.JLabel jLabel205;
+    private javax.swing.JLabel jLabel206;
+    private javax.swing.JLabel jLabel207;
+    private javax.swing.JLabel jLabel208;
+    private javax.swing.JLabel jLabel209;
     private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel210;
+    private javax.swing.JLabel jLabel211;
+    private javax.swing.JLabel jLabel212;
+    private javax.swing.JLabel jLabel213;
+    private javax.swing.JLabel jLabel214;
+    private javax.swing.JLabel jLabel215;
+    private javax.swing.JLabel jLabel216;
+    private javax.swing.JLabel jLabel217;
+    private javax.swing.JLabel jLabel218;
+    private javax.swing.JLabel jLabel219;
     private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel220;
+    private javax.swing.JLabel jLabel221;
+    private javax.swing.JLabel jLabel222;
+    private javax.swing.JLabel jLabel223;
+    private javax.swing.JLabel jLabel224;
+    private javax.swing.JLabel jLabel225;
+    private javax.swing.JLabel jLabel226;
+    private javax.swing.JLabel jLabel227;
+    private javax.swing.JLabel jLabel228;
+    private javax.swing.JLabel jLabel229;
     private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel230;
+    private javax.swing.JLabel jLabel231;
+    private javax.swing.JLabel jLabel232;
+    private javax.swing.JLabel jLabel233;
+    private javax.swing.JLabel jLabel234;
+    private javax.swing.JLabel jLabel235;
+    private javax.swing.JLabel jLabel236;
+    private javax.swing.JLabel jLabel237;
+    private javax.swing.JLabel jLabel238;
+    private javax.swing.JLabel jLabel239;
     private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel240;
+    private javax.swing.JLabel jLabel241;
+    private javax.swing.JLabel jLabel242;
+    private javax.swing.JLabel jLabel243;
+    private javax.swing.JLabel jLabel244;
+    private javax.swing.JLabel jLabel245;
+    private javax.swing.JLabel jLabel246;
+    private javax.swing.JLabel jLabel247;
+    private javax.swing.JLabel jLabel248;
+    private javax.swing.JLabel jLabel249;
     private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel250;
+    private javax.swing.JLabel jLabel251;
+    private javax.swing.JLabel jLabel252;
+    private javax.swing.JLabel jLabel253;
+    private javax.swing.JLabel jLabel254;
+    private javax.swing.JLabel jLabel255;
+    private javax.swing.JLabel jLabel256;
+    private javax.swing.JLabel jLabel257;
+    private javax.swing.JLabel jLabel258;
+    private javax.swing.JLabel jLabel259;
     private javax.swing.JLabel jLabel26;
+    private javax.swing.JLabel jLabel260;
+    private javax.swing.JLabel jLabel261;
+    private javax.swing.JLabel jLabel262;
+    private javax.swing.JLabel jLabel263;
+    private javax.swing.JLabel jLabel264;
+    private javax.swing.JLabel jLabel265;
+    private javax.swing.JLabel jLabel266;
+    private javax.swing.JLabel jLabel267;
+    private javax.swing.JLabel jLabel268;
+    private javax.swing.JLabel jLabel269;
     private javax.swing.JLabel jLabel27;
+    private javax.swing.JLabel jLabel270;
+    private javax.swing.JLabel jLabel271;
+    private javax.swing.JLabel jLabel272;
+    private javax.swing.JLabel jLabel273;
+    private javax.swing.JLabel jLabel274;
+    private javax.swing.JLabel jLabel275;
+    private javax.swing.JLabel jLabel276;
+    private javax.swing.JLabel jLabel277;
+    private javax.swing.JLabel jLabel278;
+    private javax.swing.JLabel jLabel279;
     private javax.swing.JLabel jLabel28;
+    private javax.swing.JLabel jLabel280;
+    private javax.swing.JLabel jLabel281;
+    private javax.swing.JLabel jLabel282;
+    private javax.swing.JLabel jLabel283;
+    private javax.swing.JLabel jLabel284;
+    private javax.swing.JLabel jLabel285;
+    private javax.swing.JLabel jLabel286;
+    private javax.swing.JLabel jLabel287;
+    private javax.swing.JLabel jLabel288;
+    private javax.swing.JLabel jLabel289;
     private javax.swing.JLabel jLabel29;
+    private javax.swing.JLabel jLabel290;
+    private javax.swing.JLabel jLabel291;
+    private javax.swing.JLabel jLabel292;
+    private javax.swing.JLabel jLabel293;
+    private javax.swing.JLabel jLabel294;
+    private javax.swing.JLabel jLabel295;
+    private javax.swing.JLabel jLabel296;
+    private javax.swing.JLabel jLabel297;
+    private javax.swing.JLabel jLabel298;
+    private javax.swing.JLabel jLabel299;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel30;
+    private javax.swing.JLabel jLabel300;
+    private javax.swing.JLabel jLabel301;
+    private javax.swing.JLabel jLabel302;
+    private javax.swing.JLabel jLabel303;
+    private javax.swing.JLabel jLabel304;
+    private javax.swing.JLabel jLabel305;
+    private javax.swing.JLabel jLabel306;
+    private javax.swing.JLabel jLabel307;
+    private javax.swing.JLabel jLabel308;
+    private javax.swing.JLabel jLabel309;
     private javax.swing.JLabel jLabel31;
+    private javax.swing.JLabel jLabel310;
+    private javax.swing.JLabel jLabel311;
+    private javax.swing.JLabel jLabel312;
+    private javax.swing.JLabel jLabel313;
+    private javax.swing.JLabel jLabel314;
+    private javax.swing.JLabel jLabel315;
+    private javax.swing.JLabel jLabel316;
+    private javax.swing.JLabel jLabel317;
+    private javax.swing.JLabel jLabel318;
+    private javax.swing.JLabel jLabel319;
     private javax.swing.JLabel jLabel32;
+    private javax.swing.JLabel jLabel320;
+    private javax.swing.JLabel jLabel321;
+    private javax.swing.JLabel jLabel322;
+    private javax.swing.JLabel jLabel323;
+    private javax.swing.JLabel jLabel324;
+    private javax.swing.JLabel jLabel325;
+    private javax.swing.JLabel jLabel326;
+    private javax.swing.JLabel jLabel327;
+    private javax.swing.JLabel jLabel328;
+    private javax.swing.JLabel jLabel329;
     private javax.swing.JLabel jLabel33;
+    private javax.swing.JLabel jLabel330;
+    private javax.swing.JLabel jLabel331;
+    private javax.swing.JLabel jLabel332;
+    private javax.swing.JLabel jLabel333;
+    private javax.swing.JLabel jLabel334;
+    private javax.swing.JLabel jLabel335;
+    private javax.swing.JLabel jLabel336;
+    private javax.swing.JLabel jLabel337;
+    private javax.swing.JLabel jLabel338;
+    private javax.swing.JLabel jLabel339;
     private javax.swing.JLabel jLabel34;
+    private javax.swing.JLabel jLabel340;
+    private javax.swing.JLabel jLabel341;
+    private javax.swing.JLabel jLabel342;
+    private javax.swing.JLabel jLabel343;
+    private javax.swing.JLabel jLabel344;
+    private javax.swing.JLabel jLabel345;
+    private javax.swing.JLabel jLabel346;
+    private javax.swing.JLabel jLabel347;
+    private javax.swing.JLabel jLabel348;
+    private javax.swing.JLabel jLabel349;
     private javax.swing.JLabel jLabel35;
+    private javax.swing.JLabel jLabel350;
+    private javax.swing.JLabel jLabel351;
+    private javax.swing.JLabel jLabel352;
+    private javax.swing.JLabel jLabel353;
+    private javax.swing.JLabel jLabel354;
+    private javax.swing.JLabel jLabel355;
+    private javax.swing.JLabel jLabel356;
+    private javax.swing.JLabel jLabel357;
+    private javax.swing.JLabel jLabel358;
+    private javax.swing.JLabel jLabel359;
     private javax.swing.JLabel jLabel36;
+    private javax.swing.JLabel jLabel360;
+    private javax.swing.JLabel jLabel361;
+    private javax.swing.JLabel jLabel362;
+    private javax.swing.JLabel jLabel363;
+    private javax.swing.JLabel jLabel364;
+    private javax.swing.JLabel jLabel365;
+    private javax.swing.JLabel jLabel366;
     private javax.swing.JLabel jLabel37;
     private javax.swing.JLabel jLabel38;
     private javax.swing.JLabel jLabel39;
@@ -1553,8 +2737,32 @@ public class emergencycontact extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel29;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel30;
+    private javax.swing.JPanel jPanel31;
+    private javax.swing.JPanel jPanel32;
+    private javax.swing.JPanel jPanel33;
+    private javax.swing.JPanel jPanel34;
+    private javax.swing.JPanel jPanel35;
+    private javax.swing.JPanel jPanel36;
+    private javax.swing.JPanel jPanel37;
+    private javax.swing.JPanel jPanel38;
+    private javax.swing.JPanel jPanel39;
     private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel40;
+    private javax.swing.JPanel jPanel41;
+    private javax.swing.JPanel jPanel42;
+    private javax.swing.JPanel jPanel43;
+    private javax.swing.JPanel jPanel44;
+    private javax.swing.JPanel jPanel45;
+    private javax.swing.JPanel jPanel46;
+    private javax.swing.JPanel jPanel47;
+    private javax.swing.JPanel jPanel48;
+    private javax.swing.JPanel jPanel49;
     private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel50;
+    private javax.swing.JPanel jPanel51;
+    private javax.swing.JPanel jPanel52;
+    private javax.swing.JPanel jPanel53;
+    private javax.swing.JPanel jPanel54;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
