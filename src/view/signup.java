@@ -209,6 +209,10 @@ public class signup extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Email IS MISSING.");
             a = 1;
         }
+        if (!Email.endsWith("@gmail.com")){
+            JOptionPane.showMessageDialog(null, "Email SYNTAX IS WRONG.");
+            a = 1;
+        }
         if (Password.equals("")) {
             JOptionPane.showMessageDialog(null, "Password IS MISSING.");
             a = 1;
