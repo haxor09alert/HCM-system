@@ -4,7 +4,7 @@ package controller;
 
 import java.sql.ResultSet;
 
-import database.DbConnectionFees;
+import database.DbConnection;
 
 import models.Fees;
 
@@ -12,7 +12,7 @@ import models.Fees;
 
 public class FeesController {
 
-    DbConnectionFees dbConnection;
+    DbConnection dbConnection;
 
 
 
@@ -35,7 +35,7 @@ public class FeesController {
 
         String inserQuery = "insert into bill(PatientName,BedNo,DoctorName,Total) "+ "values('"+PatientName+"','"+BedNo+"','"+DocName+"','"+Total+"')";
 
-        dbConnection = new DbConnectionFees();
+        dbConnection = new DbConnection();
 
         int Result = dbConnection.manipulate(inserQuery);
 
