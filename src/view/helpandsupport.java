@@ -1,4 +1,5 @@
 package view;
+
 import javax.swing.JOptionPane;
 import controller.HnSController;
 import models.helpnsupportm;
@@ -28,7 +29,7 @@ public class helpandsupport extends javax.swing.JFrame {
      */
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated
-    // Code">//GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         jLabel2 = new javax.swing.JLabel();
@@ -47,9 +48,11 @@ public class helpandsupport extends javax.swing.JFrame {
         contact = new javax.swing.JTextField();
         address = new javax.swing.JTextField();
         email = new javax.swing.JTextField();
-        jTextField5 = new javax.swing.JTextField();
         jTextField1 = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
+        jPanel3 = new javax.swing.JPanel();
+        name1 = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
 
         jLabel2.setText("jLabel2");
@@ -118,16 +121,6 @@ public class helpandsupport extends javax.swing.JFrame {
         getContentPane().add(jPanel2);
         jPanel2.setBounds(490, 310, 270, 240);
 
-        jTextField5.setBackground(new java.awt.Color(153, 153, 255));
-        jTextField5.setText("How can we help you?");
-        jTextField5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField5ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jTextField5);
-        jTextField5.setBounds(270, 310, 207, 190);
-
         jTextField1.setBackground(new java.awt.Color(153, 153, 255));
         jTextField1.setText("info.hcms@gmail.com");
         getContentPane().add(jTextField1);
@@ -138,10 +131,24 @@ public class helpandsupport extends javax.swing.JFrame {
         getContentPane().add(jLabel8);
         jLabel8.setBounds(10, 10, 200, 180);
 
+        jPanel3.setBackground(new java.awt.Color(102, 102, 255));
+        jPanel3.setForeground(new java.awt.Color(102, 102, 255));
+        jPanel3.setLayout(null);
+        jPanel3.add(name1);
+        name1.setBounds(30, 60, 150, 90);
+
+        jLabel1.setText("How may we help you?");
+        jPanel3.add(jLabel1);
+        jLabel1.setBounds(40, 20, 150, 16);
+
+        getContentPane().add(jPanel3);
+        jPanel3.setBounds(270, 320, 210, 180);
+
+        jLabel7.setBackground(new java.awt.Color(255, 0, 0));
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Health care management  system.jpg"))); // NOI18N
         jLabel7.setText("jLabel7");
         getContentPane().add(jLabel7);
-        jLabel7.setBounds(-40, -30, 940, 660);
+        jLabel7.setBounds(-10, -120, 940, 750);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -231,6 +238,7 @@ public class helpandsupport extends javax.swing.JFrame {
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -240,8 +248,9 @@ public class helpandsupport extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
     private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField5;
     private javax.swing.JTextField name;
+    private javax.swing.JTextField name1;
     // End of variables declaration//GEN-END:variables
 }
