@@ -33,7 +33,12 @@ public class AdminDashBoard extends javax.swing.JFrame {
         Appointments = new javax.swing.JButton();
         Profile = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        DoctorListBtn = new javax.swing.JButton();
+        BillingBtn = new javax.swing.JButton();
+        PrescriptionBtn = new javax.swing.JButton();
+        DonerListBtn = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
@@ -126,10 +131,50 @@ public class AdminDashBoard extends javax.swing.JFrame {
         getContentPane().add(jLabel1);
         jLabel1.setBounds(110, 70, 200, 200);
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BG_frame.png"))); // NOI18N
-        jLabel3.setText("jLabel3");
-        getContentPane().add(jLabel3);
-        jLabel3.setBounds(0, 0, 1550, 830);
+        jPanel1.setBackground(new java.awt.Color(102, 0, 102));
+        jPanel1.setLayout(null);
+
+        DoctorListBtn.setBackground(new java.awt.Color(102, 0, 102));
+        DoctorListBtn.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 18)); // NOI18N
+        DoctorListBtn.setText("Doctor List");
+        DoctorListBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DoctorListBtnActionPerformed(evt);
+            }
+        });
+        jPanel1.add(DoctorListBtn);
+        DoctorListBtn.setBounds(10, 10, 243, 100);
+
+        BillingBtn.setBackground(new java.awt.Color(102, 0, 102));
+        BillingBtn.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 18)); // NOI18N
+        BillingBtn.setText("Billings");
+        jPanel1.add(BillingBtn);
+        BillingBtn.setBounds(260, 10, 227, 100);
+
+        PrescriptionBtn.setBackground(new java.awt.Color(102, 0, 102));
+        PrescriptionBtn.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 18)); // NOI18N
+        PrescriptionBtn.setText("Prescription");
+        jPanel1.add(PrescriptionBtn);
+        PrescriptionBtn.setBounds(10, 120, 243, 100);
+
+        DonerListBtn.setBackground(new java.awt.Color(102, 0, 102));
+        DonerListBtn.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 18)); // NOI18N
+        DonerListBtn.setText("Doner List");
+        DonerListBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DonerListBtnActionPerformed(evt);
+            }
+        });
+        jPanel1.add(DonerListBtn);
+        DonerListBtn.setBounds(260, 120, 227, 100);
+
+        getContentPane().add(jPanel1);
+        jPanel1.setBounds(460, 380, 500, 240);
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/BG_frame.png"))); // NOI18N
+        jLabel2.setText("jLabel2");
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(0, 0, 1550, 840);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -153,6 +198,14 @@ public class AdminDashBoard extends javax.swing.JFrame {
         Login log=new Login();
         log.show();
     }//GEN-LAST:event_ProfileActionPerformed
+
+    private void DoctorListBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DoctorListBtnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_DoctorListBtnActionPerformed
+
+    private void DonerListBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DonerListBtnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_DonerListBtnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -192,10 +245,15 @@ public class AdminDashBoard extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton AboutUs;
     private javax.swing.JButton Appointments;
+    private javax.swing.JButton BillingBtn;
+    private javax.swing.JButton DoctorListBtn;
+    private javax.swing.JButton DonerListBtn;
     private javax.swing.JPanel MenuPanel;
+    private javax.swing.JButton PrescriptionBtn;
     private javax.swing.JButton Profile;
     private javax.swing.JButton UpdatesButton;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
