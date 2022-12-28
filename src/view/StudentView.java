@@ -1,13 +1,14 @@
 package view;
 
-import controller.StudentController;
+import controller.UserController;
 import models.Student;
+import models.User;
 
 public class StudentView {
     public static void main(String[] args) {
-        Student s1 = new Student(2, "Prasanna", 20, "Chitwan", 364548);
-        StudentController sc = new StudentController();
-        int insertedStudent = sc.insertStudent(s1);
+        User s1 = new User("Biraj", "birajcondo@gmail.com", "1234", null);
+        UserController sc = new UserController();
+        int insertedStudent = sc.insertDetails(s1);
 
         if (insertedStudent > 0) {
             System.out.println("Student inserted");

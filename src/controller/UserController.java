@@ -1,45 +1,25 @@
 package controller;
 
-
-
 import java.sql.ResultSet;
 
 import database.DbConnection;
-
 import models.User;
 
-
-
 public class UserController {
-
     DbConnection dbConnection;
 
-
-
-    /**
-     * @param user
-     * @return
-     */
     public int insertDetails(User user){
-
         String name = user.getName();
-
         String email = user.getEmail();
-
         String pass = user.getPass();
 
-
-
-
-        String inserQuery = "insert into signupdetail(NAME,EMAIL,PASSWORD) "+ "values('"+name+"','"+email+"','"+pass+"')";
-
+        String inserQuery = "insert into signupdetail(Name,Email,password) "+ "values('"+name+"','"+email+"','"+pass+"')";
         dbConnection = new DbConnection();
-
         int Result = dbConnection.manipulate(inserQuery);
-
         return Result;
-    }
 
+        
+    }
     public ResultSet selectDetails(User user){
         // String name = user.getName();
         String email = user.getEmail();
@@ -67,3 +47,5 @@ public class UserController {
         return result;
     }
 }
+
+
