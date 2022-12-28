@@ -1,5 +1,7 @@
 package view;
 
+import java.math.BigInteger;
+
 import javax.swing.JOptionPane;
 import controller.HnSController;
 import models.helpnsupportm;
@@ -29,7 +31,7 @@ public class helpandsupport extends javax.swing.JFrame {
      */
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    // Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         jLabel2 = new javax.swing.JLabel();
@@ -48,11 +50,9 @@ public class helpandsupport extends javax.swing.JFrame {
         contact = new javax.swing.JTextField();
         address = new javax.swing.JTextField();
         email = new javax.swing.JTextField();
+        feedback = new javax.swing.JTextField();
         jTextField1 = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
-        jPanel3 = new javax.swing.JPanel();
-        name1 = new javax.swing.JTextField();
-        jLabel1 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
 
         jLabel2.setText("jLabel2");
@@ -121,34 +121,32 @@ public class helpandsupport extends javax.swing.JFrame {
         getContentPane().add(jPanel2);
         jPanel2.setBounds(490, 310, 270, 240);
 
+        feedback.setBackground(new java.awt.Color(153, 153, 255));
+        feedback.setText("How can we help you?");
+        feedback.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                feedbackActionPerformed(evt);
+            }
+        });
+        getContentPane().add(feedback);
+        feedback.setBounds(270, 310, 207, 190);
+
         jTextField1.setBackground(new java.awt.Color(153, 153, 255));
         jTextField1.setText("info.hcms@gmail.com");
         getContentPane().add(jTextField1);
         jTextField1.setBounds(270, 510, 210, 30);
 
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Capture.PNG"))); // NOI18N
-        jLabel8.setText("jLabel8");
-        getContentPane().add(jLabel8);
-        jLabel8.setBounds(10, 10, 200, 180);
+        // jLabel8.setIcon(new
+        // javax.swing.ImageIcon(getClass().getResource("/view/Capture.PNG"))); //
+        // NOI18N
+        // jLabel8.setText("jLabel8");
+        // getContentPane().add(jLabel8);
+        // jLabel8.setBounds(10, 10, 200, 180);
 
-        jPanel3.setBackground(new java.awt.Color(102, 102, 255));
-        jPanel3.setForeground(new java.awt.Color(102, 102, 255));
-        jPanel3.setLayout(null);
-        jPanel3.add(name1);
-        name1.setBounds(30, 60, 150, 90);
-
-        jLabel1.setText("How may we help you?");
-        jPanel3.add(jLabel1);
-        jLabel1.setBounds(40, 20, 150, 16);
-
-        getContentPane().add(jPanel3);
-        jPanel3.setBounds(270, 320, 210, 180);
-
-        jLabel7.setBackground(new java.awt.Color(255, 0, 0));
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Health care management  system.jpg"))); // NOI18N
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/BG_frame.png"))); // NOI18N
         jLabel7.setText("jLabel7");
         getContentPane().add(jLabel7);
-        jLabel7.setBounds(-10, -120, 940, 750);
+        jLabel7.setBounds(-40, -30, 940, 660);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -156,15 +154,17 @@ public class helpandsupport extends javax.swing.JFrame {
     private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jButton12ActionPerformed
         // TODO add your handling code here:
         String Name = name.getText();
-        String Contact = contact.getText();
+        String SContact = contact.getText();
         String Address = address.getText();
         String Email = email.getText();
+        String Feedback = feedback.getText();
+
         int a = 0;
         if (Name.equals("")) {
             JOptionPane.showMessageDialog(null, "NAME IS MISSING.");
             a = 1;
         }
-        if (Contact.equals("")) {
+        if (SContact.equals("")) {
             JOptionPane.showMessageDialog(null, "Contact IS MISSING.");
             a = 1;
         }
@@ -174,17 +174,34 @@ public class helpandsupport extends javax.swing.JFrame {
         }
         if (Email.equals("")) {
             JOptionPane.showMessageDialog(null, "Email IS MISSING.");
+            a = 1;
         }
+
+        if (Feedback.equals("")) {
+            JOptionPane.showMessageDialog(null, "Feedback IS MISSING.");
+            a = 1;
+        }
+
         if (a == 0) {
 
-            JOptionPane.showMessageDialog(null, "verified successfull.");
+            helpnsupportm s1 = new helpnsupportm(Name, SContact, Address, Email, Feedback);
+            HnSController sc = new HnSController();
+            int inserteddata = sc.insertDetails(s1);
+
+            if (inserteddata > 0) {
+                JOptionPane.showMessageDialog(null, "verified successfull.");
+            }
+
+            else {
+                JOptionPane.showMessageDialog(null, "Failed.");
+            }
         }
 
     }// GEN-LAST:event_jButton12ActionPerformed
 
-    private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jTextField5ActionPerformed
+    private void feedbackActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_feedbackActionPerformed
         // TODO add your handling code here:
-    }// GEN-LAST:event_jTextField5ActionPerformed
+    }// GEN-LAST:event_feedbackActionPerformed
 
     /**
      * @param args the command line arguments
@@ -238,7 +255,6 @@ public class helpandsupport extends javax.swing.JFrame {
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -248,9 +264,8 @@ public class helpandsupport extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
     private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField feedback;
     private javax.swing.JTextField name;
-    private javax.swing.JTextField name1;
     // End of variables declaration//GEN-END:variables
 }
