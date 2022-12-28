@@ -1,9 +1,12 @@
+package view;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 
-package view;
+
+
 /**
  *
  * @author Maharjan
@@ -121,8 +124,8 @@ public class Dashboard extends javax.swing.JFrame {
         getContentPane().add(MenuPanel);
         MenuPanel.setBounds(700, 100, 840, 60);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Maharjan\\Downloads\\Health Track logo smaller.png")); // NOI18N
-        jLabel1.setText("jLabel1");
+        jLabel1.setIcon(new javax.swing.ImageIcon("/view/logo.jpg")); // NOI18N
+        jLabel1.setText("");
         getContentPane().add(jLabel1);
         jLabel1.setBounds(20, 60, 200, 200);
 
