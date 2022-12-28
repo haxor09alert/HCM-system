@@ -1,3 +1,7 @@
+package view;
+
+import controller.UserController;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -7,12 +11,12 @@
  *
  * @author Rajil
  */
-public class profile extends javax.swing.JFrame {
+public class Profile extends javax.swing.JFrame {
 
     /**
      * Creates new form profile
      */
-    public profile() {
+    public Profile() {
         initComponents();
     }
 
@@ -52,50 +56,59 @@ public class profile extends javax.swing.JFrame {
         jCheckBox2.setText("jCheckBox2");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        getContentPane().setLayout(null);
 
         jLabel2.setText("Name :");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 140, 140, 30));
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(300, 140, 140, 30);
 
         jLabel3.setText("Address :");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 180, 140, 30));
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(290, 180, 140, 30);
 
         jLabel4.setText("Age :");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 220, 130, 30));
+        getContentPane().add(jLabel4);
+        jLabel4.setBounds(310, 220, 130, 30);
 
         jLabel5.setText("Contact :");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 260, 140, 30));
+        getContentPane().add(jLabel5);
+        jLabel5.setBounds(290, 260, 140, 30);
 
         jLabel6.setText("Sex :");
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 290, 130, 30));
+        getContentPane().add(jLabel6);
+        jLabel6.setBounds(310, 290, 130, 30);
 
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 140, 260, 30));
+        getContentPane().add(jTextField1);
+        jTextField1.setBounds(350, 140, 260, 30);
 
         jTextField2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField2ActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 180, 260, 30));
+        getContentPane().add(jTextField2);
+        jTextField2.setBounds(350, 180, 260, 30);
 
         jTextField4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField4ActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 220, 260, 30));
+        getContentPane().add(jTextField4);
+        jTextField4.setBounds(350, 220, 260, 30);
 
         jTextField5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField5ActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 260, 260, 30));
+        getContentPane().add(jTextField5);
+        jTextField5.setBounds(350, 260, 260, 30);
 
         jButton7.setText("SUBMIT");
         jButton7.addActionListener(new java.awt.event.ActionListener() {
@@ -103,7 +116,8 @@ public class profile extends javax.swing.JFrame {
                 jButton7ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 320, 260, 30));
+        getContentPane().add(jButton7);
+        jButton7.setBounds(350, 320, 260, 30);
 
         jButton6.setText("MEDICAL HISTORY");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
@@ -111,11 +125,13 @@ public class profile extends javax.swing.JFrame {
                 jButton6ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 370, 260, 60));
+        getContentPane().add(jButton6);
+        jButton6.setBounds(350, 370, 260, 60);
 
         buttonGroup1.add(jRadioButton1);
         jRadioButton1.setText("Male");
-        getContentPane().add(jRadioButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 290, 140, 30));
+        getContentPane().add(jRadioButton1);
+        jRadioButton1.setBounds(460, 290, 140, 30);
 
         buttonGroup1.add(jRadioButton2);
         jRadioButton2.setText("Female");
@@ -124,7 +140,8 @@ public class profile extends javax.swing.JFrame {
                 jRadioButton2ActionPerformed(evt);
             }
         });
-        getContentPane().add(jRadioButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 290, 150, 30));
+        getContentPane().add(jRadioButton2);
+        jRadioButton2.setBounds(370, 290, 150, 30);
 
         jPanel2.setBackground(new java.awt.Color(204, 204, 255));
 
@@ -132,7 +149,12 @@ public class profile extends javax.swing.JFrame {
 
         jButton4.setText("APPOINTMENT");
 
-        jButton5.setText("LOGIN");
+        jButton5.setText("LOGOUT");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
 
         jButton2.setText("UPDATES");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -168,15 +190,18 @@ public class profile extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 10, -1, -1));
+        getContentPane().add(jPanel2);
+        jPanel2.setBounds(600, 10, 458, 45);
 
-        jLabel7.setIcon(new javax.swing.ImageIcon("C:\\Users\\ACER\\Desktop\\clz sem 2\\health track\\HealthTrack\\src\\kemptons-blank-profile-picture.jpg")); // NOI18N
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/kemptons-blank-profile-picture.jpg"))); // NOI18N
         jLabel7.setText("jLabel7");
-        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 140, 120, 150));
+        getContentPane().add(jLabel7);
+        jLabel7.setBounds(150, 140, 120, 150);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BG frame.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/BG_frame.png"))); // NOI18N
         jLabel1.setText("jLabel1");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1050, 560));
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(0, 0, 1050, 560);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -213,6 +238,18 @@ public class profile extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton7ActionPerformed
 
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        // TODO add your handling code here:
+        
+        
+
+        dispose();
+        Login log=new Login();
+        log.show();
+
+
+    }//GEN-LAST:event_jButton5ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -230,20 +267,21 @@ public class profile extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(profile.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Profile.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(profile.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Profile.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(profile.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Profile.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(profile.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Profile.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new profile().setVisible(true);
+                new Profile().setVisible(true);
             }
         });
     }

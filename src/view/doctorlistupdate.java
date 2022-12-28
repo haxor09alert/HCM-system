@@ -5,11 +5,13 @@
 package view;
 
 import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableModel;
+
 import models.drlistmodel;
 import controller.drlistcontroller;
 import database.DbConnection;
 import java.sql.ResultSet;
-import net.proteanit.sql.DbUtils;
 
 /**
  *
@@ -22,6 +24,7 @@ public class doctorlistupdate extends javax.swing.JFrame {
      */
     public doctorlistupdate() {
         initComponents();
+        view();
     }
 
     /**
@@ -40,25 +43,29 @@ public class doctorlistupdate extends javax.swing.JFrame {
         jButton4 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         DTable = new javax.swing.JTable();
-        jButton5 = new javax.swing.JButton();
+        updateBtn = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         Depart = new javax.swing.JTextField();
         age = new javax.swing.JTextField();
         lname = new javax.swing.JTextField();
-        fname = new javax.swing.JTextField();
+        doctor_id = new javax.swing.JTextField();
         special = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
+        fname = new javax.swing.JTextField();
+        jLabel9 = new javax.swing.JLabel();
         addBtn = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
+        delBtn = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMinimumSize(new java.awt.Dimension(1080, 650));
         getContentPane().setLayout(null);
 
         jPanel2.setBackground(new java.awt.Color(153, 102, 255));
@@ -116,32 +123,46 @@ public class doctorlistupdate extends javax.swing.JFrame {
 
             },
             new String [] {
-                "D ID", "Doctor name", "Age", "Department", "Speciality"
+                "Doctor_id", "Doctor name", "Age", "Department", "Speciality"
             }
-        ));
+        ) {
+            Class[] types = new Class [] {
+                java.lang.Integer.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
         DTable.setGridColor(java.awt.Color.white);
         DTable.setShowHorizontalLines(true);
         DTable.setShowVerticalLines(true);
+        DTable.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                DTableMouseClicked(evt);
+            }
+        });
         jScrollPane1.setViewportView(DTable);
 
         getContentPane().add(jScrollPane1);
         jScrollPane1.setBounds(530, 200, 510, 270);
 
-        jButton5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton5.setText("View Doctor");
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
+        updateBtn.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        updateBtn.setText("Update Doctor");
+        updateBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
+                updateBtnActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton5);
-        jButton5.setBounds(760, 530, 160, 27);
+        getContentPane().add(updateBtn);
+        updateBtn.setBounds(760, 530, 160, 27);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Health Track logo smaller.png"))); // NOI18N
         getContentPane().add(jLabel2);
         jLabel2.setBounds(40, 10, 210, 180);
 
         jPanel1.setBackground(new java.awt.Color(153, 102, 255));
+        jPanel1.setLayout(null);
 
         Depart.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         Depart.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -153,6 +174,13 @@ public class doctorlistupdate extends javax.swing.JFrame {
                 DepartFocusLost(evt);
             }
         });
+        Depart.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DepartActionPerformed(evt);
+            }
+        });
+        jPanel1.add(Depart);
+        Depart.setBounds(140, 170, 190, 30);
 
         age.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         age.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -169,6 +197,8 @@ public class doctorlistupdate extends javax.swing.JFrame {
                 ageActionPerformed(evt);
             }
         });
+        jPanel1.add(age);
+        age.setBounds(140, 130, 190, 30);
 
         lname.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         lname.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -185,22 +215,26 @@ public class doctorlistupdate extends javax.swing.JFrame {
                 lnameActionPerformed(evt);
             }
         });
+        jPanel1.add(lname);
+        lname.setBounds(140, 90, 190, 30);
 
-        fname.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        fname.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        fname.addFocusListener(new java.awt.event.FocusAdapter() {
+        doctor_id.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        doctor_id.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        doctor_id.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
-                fnameFocusGained(evt);
+                doctor_idFocusGained(evt);
             }
             public void focusLost(java.awt.event.FocusEvent evt) {
-                fnameFocusLost(evt);
+                doctor_idFocusLost(evt);
             }
         });
-        fname.addActionListener(new java.awt.event.ActionListener() {
+        doctor_id.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                fnameActionPerformed(evt);
+                doctor_idActionPerformed(evt);
             }
         });
+        jPanel1.add(doctor_id);
+        doctor_id.setBounds(140, 10, 190, 30);
 
         special.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         special.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -217,79 +251,59 @@ public class doctorlistupdate extends javax.swing.JFrame {
                 specialActionPerformed(evt);
             }
         });
+        jPanel1.add(special);
+        special.setBounds(140, 210, 190, 30);
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel3.setText("Dr. First Name");
+        jLabel3.setText("Doctor ID");
+        jPanel1.add(jLabel3);
+        jLabel3.setBounds(30, 20, 98, 20);
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel4.setText("Dr. Age");
+        jPanel1.add(jLabel4);
+        jLabel4.setBounds(30, 140, 98, 20);
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel5.setText("Specalist");
+        jPanel1.add(jLabel5);
+        jLabel5.setBounds(30, 220, 98, 20);
 
         jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel6.setText("Department");
+        jPanel1.add(jLabel6);
+        jLabel6.setBounds(30, 180, 110, 20);
 
         jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel7.setText("Dr. Last Name");
+        jPanel1.add(jLabel7);
+        jLabel7.setBounds(30, 100, 110, 20);
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(28, 28, 28)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, 98, Short.MAX_VALUE)
-                        .addGap(18, 18, 18)
-                        .addComponent(special, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, 110, Short.MAX_VALUE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(Depart, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, 110, Short.MAX_VALUE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(lname, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, 98, Short.MAX_VALUE)
-                        .addGap(18, 18, 18)
-                        .addComponent(age, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(18, 18, 18)
-                        .addComponent(fname, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap())
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(fname, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel3))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lname, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel7))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(age, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel4))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Depart, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel6))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(special, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel5))
-                .addGap(122, 122, 122))
-        );
+        fname.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        fname.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        fname.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                fnameFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                fnameFocusLost(evt);
+            }
+        });
+        fname.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fnameActionPerformed(evt);
+            }
+        });
+        jPanel1.add(fname);
+        fname.setBounds(140, 50, 190, 30);
+
+        jLabel9.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel9.setText("Dr. First Name");
+        jPanel1.add(jLabel9);
+        jLabel9.setBounds(30, 60, 98, 20);
 
         getContentPane().add(jPanel1);
-        jPanel1.setBounds(70, 320, 340, 200);
+        jPanel1.setBounds(70, 280, 340, 260);
 
         addBtn.setBackground(new java.awt.Color(204, 204, 204));
         addBtn.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -300,7 +314,7 @@ public class doctorlistupdate extends javax.swing.JFrame {
             }
         });
         getContentPane().add(addBtn);
-        addBtn.setBounds(210, 550, 107, 27);
+        addBtn.setBounds(60, 560, 107, 27);
 
         jPanel3.setBackground(new java.awt.Color(153, 102, 255));
 
@@ -324,7 +338,18 @@ public class doctorlistupdate extends javax.swing.JFrame {
         );
 
         getContentPane().add(jPanel3);
-        jPanel3.setBounds(180, 250, 120, 50);
+        jPanel3.setBounds(200, 220, 120, 50);
+
+        delBtn.setBackground(new java.awt.Color(204, 204, 204));
+        delBtn.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        delBtn.setText("Delete doctor");
+        delBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                delBtnActionPerformed(evt);
+            }
+        });
+        getContentPane().add(delBtn);
+        delBtn.setBounds(350, 560, 130, 27);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/BG frame.png"))); // NOI18N
         jLabel1.setText("jLabel1");
@@ -342,17 +367,17 @@ public class doctorlistupdate extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton4ActionPerformed
 
-    private void fnameFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_fnameFocusGained
+    private void doctor_idFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_doctor_idFocusGained
         // TODO add your handling code here:
-    }//GEN-LAST:event_fnameFocusGained
+    }//GEN-LAST:event_doctor_idFocusGained
 
-    private void fnameFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_fnameFocusLost
+    private void doctor_idFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_doctor_idFocusLost
         // TODO add your handling code here:
-    }//GEN-LAST:event_fnameFocusLost
+    }//GEN-LAST:event_doctor_idFocusLost
 
-    private void fnameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fnameActionPerformed
+    private void doctor_idActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_doctor_idActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_fnameActionPerformed
+    }//GEN-LAST:event_doctor_idActionPerformed
 
     private void lnameFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_lnameFocusGained
         // TODO add your handling code here:
@@ -399,13 +424,15 @@ public class doctorlistupdate extends javax.swing.JFrame {
     }//GEN-LAST:event_specialActionPerformed
 
     private void addBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addBtnActionPerformed
+    String id=doctor_id.getText();
     String Fname=fname.getText();
     String Lname=lname.getText();
     String Age = age.getText();
     String Depatment=Depart.getText();
     String Special=special.getText();
-    String id=null;
+    System.out.println(id+" "+Fname+" "+Lname+" "+Age+" "+Depatment+" "+Special);
     int a = 0;
+    
     if (Fname.equals("")){
         JOptionPane.showMessageDialog(null, "FNAME IS MISSING.");
             a = 1;
@@ -428,7 +455,10 @@ public class doctorlistupdate extends javax.swing.JFrame {
     }
     if (a==0){
         try{
-            drlistmodel d1= new drlistmodel(0,Fname,Lname,Age, Depatment,Special);
+            System.out.println(id+" "+Fname+" "+Lname+" "+Age+" "+Depatment+" "+Special);
+            // int Id=Integer.parseInt(id);
+            int age=Integer.parseInt(Age);
+            drlistmodel d1= new drlistmodel(0,Fname,Lname,age, Depatment,Special);
 //            drlistcontroller 
             drlistcontroller sc = new drlistcontroller();
             int insertdoctor = sc.insertdetails(d1);
@@ -439,6 +469,7 @@ public class doctorlistupdate extends javax.swing.JFrame {
                     System.out.println("Failed to insert data");
                 }
                 JOptionPane.showMessageDialog(null, "VALIDATION SUCCESSFUL");
+                view();
                 
             } 
         catch (Exception e) {
@@ -453,28 +484,157 @@ public class doctorlistupdate extends javax.swing.JFrame {
         
     }//GEN-LAST:event_addBtnActionPerformed
 
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+    private void updateBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateBtnActionPerformed
+
+       
+        String id=doctor_id.getText();
+    String Fname=fname.getText();
+    String Lname=lname.getText();
+    String Age = age.getText();
+    String Depatment=Depart.getText();
+    String Special=special.getText();
+    System.out.println(id+" "+Fname+" "+Lname+" "+Age+" "+Depatment+" "+Special);
+    int a = 0;
     
-        
-        String query="select doctor_id, CONCAT(fname,' ',lname) as Name,age,department,specialist from doctor";
-        
-        DbConnection dbConnection = new DbConnection();
-        ResultSet result = dbConnection.retrieve(query);
-        
-        DTable.setModel(DbUtils.resultSetToTableModel(result));
-        
-        
-        
-        
-        
-        
-   
+    if (Fname.equals("")){
+        JOptionPane.showMessageDialog(null, "FNAME IS MISSING.");
+            a = 1;
+    }
+    if (Lname.equals("")){
+        JOptionPane.showMessageDialog(null, "LNAME IS MISSING.");
+            a = 1;
+    }
+    if (Age.equals("")){
+        JOptionPane.showMessageDialog(null, "Age IS MISSING.");
+            a = 1;
+    }
+    if (Depatment.equals("")){
+        JOptionPane.showMessageDialog(null, "Depatment IS MISSING.");
+            a = 1;
+    }
+    if (Special.equals("")){
+        JOptionPane.showMessageDialog(null, "Specialization IS MISSING.");
+            a = 1;
+    }
+    if (a==0){
+        try{
+            System.out.println(id+" "+Fname+" "+Lname+" "+Age+" "+Depatment+" "+Special);
+            int Id=Integer.parseInt(id);
+            int age=Integer.parseInt(Age);
+            drlistmodel d1= new drlistmodel(Id,Fname,Lname,age, Depatment,Special);
+//            drlistcontroller 
+            drlistcontroller sc = new drlistcontroller();
+            int insertdoctor = sc.updateDoctor(d1);
 
-
-
+                if (insertdoctor > 0) {
+                    System.out.println("data inserted");
+                } else {
+                    System.out.println("Failed to insert data");
+                }
+                JOptionPane.showMessageDialog(null, "Update SUCCESSFUL");
+                view();
+                
+            } 
+        catch (Exception e) {
+                // TODO: handle exception
+                JOptionPane.showMessageDialog(null, e);
+                System.out.printf(null,e);
+            }
+            
+        }
+    
+    // TODO add your handling code here:
+        
+    }
+        // DTable.setModel(DbUtils.resultSetToTableModel(result));
+     
          // TODO add your handling code here:
-    }//GEN-LAST:event_jButton5ActionPerformed
+    //GEN-LAST:event_updateBtnActionPerformed
 
+    private void fnameFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_fnameFocusGained
+        // TODO add your handling code here:
+    }//GEN-LAST:event_fnameFocusGained
+
+    private void fnameFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_fnameFocusLost
+        // TODO add your handling code here:
+    }//GEN-LAST:event_fnameFocusLost
+
+    private void fnameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fnameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_fnameActionPerformed
+
+    private void DepartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DepartActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_DepartActionPerformed
+
+    private void delBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_delBtnActionPerformed
+        // TODO add your handling code here:
+    String Fname=fname.getText();
+    String Lname=lname.getText();
+    String Age = age.getText();
+    String Depatment=Depart.getText();
+    String Special=special.getText();
+    String id=doctor_id.getText();
+    try{
+            int Id=Integer.parseInt(id);
+            int age=Integer.parseInt(Age);
+            drlistmodel d1= new drlistmodel(Id,Fname,Lname, age, Depatment, Special);
+//            drlistcontroller 
+            drlistcontroller sc = new drlistcontroller();
+            int deldoctor = sc.deleteDoctor(d1);
+
+                if (deldoctor > 0) {
+                    System.out.println("delete inserted");
+                } else {
+                    System.out.println("Failed to insert data");
+                }
+                JOptionPane.showMessageDialog(null, "Delete Successfull.");
+                view();
+                
+            } 
+        catch (Exception e) {
+                // TODO: handle exception
+                JOptionPane.showMessageDialog(null, e);
+                System.out.printf(null,e);
+            }
+
+        
+           
+    }//GEN-LAST:event_delBtnActionPerformed
+
+    private void DTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DTableMouseClicked
+        int i = DTable.getSelectedRow();
+        TableModel model = DTable.getModel();
+        doctor_id.setText(model.getValueAt(i, 0).toString());
+        String name = model.getValueAt(i, 1).toString();
+        String[] parts = name.split(" ");
+        String part1 = parts[0];
+        String part2 = parts[1];
+        fname.setText(part1);
+        lname.setText(part2);
+        age.setText(model.getValueAt(i, 2).toString());
+        Depart.setText(model.getValueAt(i, 3).toString());
+        special.setText(model.getValueAt(i, 4).toString());
+    }//GEN-LAST:event_DTableMouseClicked
+public void view(){
+    DefaultTableModel model = (DefaultTableModel) DTable.getModel();
+    model.setRowCount(0);
+
+    try {
+        ResultSet result = new drlistcontroller().selectdetails();
+        while (result.next()) {
+        String id = result.getString(1);
+        String fname = result.getString(2);
+        String lname = result.getString(3);
+        String age = result.getString(4);
+        String depart = result.getString(5);
+        String special = result.getString(6);
+        model.addRow(new Object[]{id,(fname+" "+ lname),age,depart,special});
+        }
+    } catch (Exception e) {
+        System.out.println(e);
+    }
+}
     /**
      * @param args the command line arguments
      */
@@ -515,12 +675,13 @@ public class doctorlistupdate extends javax.swing.JFrame {
     private javax.swing.JTextField Depart;
     private javax.swing.JButton addBtn;
     private javax.swing.JTextField age;
+    private javax.swing.JButton delBtn;
+    private javax.swing.JTextField doctor_id;
     private javax.swing.JTextField fname;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -529,11 +690,17 @@ public class doctorlistupdate extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField lname;
     private javax.swing.JTextField special;
+    private javax.swing.JButton updateBtn;
     // End of variables declaration//GEN-END:variables
+
+    private void prepareStatement(String sql) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 }
