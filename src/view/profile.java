@@ -1,5 +1,9 @@
 package view;
 
+
+import controller.UserController;
+
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -41,7 +45,10 @@ public class profile extends javax.swing.JFrame {
         jTextField5 = new javax.swing.JTextField();
         jButton7 = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
+
         jButton8 = new javax.swing.JButton();
+
+
         jRadioButton1 = new javax.swing.JRadioButton();
         jRadioButton2 = new javax.swing.JRadioButton();
         jPanel2 = new javax.swing.JPanel();
@@ -109,15 +116,22 @@ public class profile extends javax.swing.JFrame {
         getContentPane().add(jTextField5);
         jTextField5.setBounds(350, 260, 260, 30);
 
+
         jButton7.setForeground(new java.awt.Color(255, 0, 0));
         jButton7.setText("DELETE ACCOUNT");
+
+        jButton7.setText("SUBMIT");
+
         jButton7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton7ActionPerformed(evt);
             }
         });
         getContentPane().add(jButton7);
+
         jButton7.setBounds(350, 430, 260, 30);
+        jButton7.setBounds(350, 320, 260, 30);
+
 
         jButton6.setText("MEDICAL HISTORY");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
@@ -126,6 +140,7 @@ public class profile extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton6);
+
         jButton6.setBounds(350, 360, 260, 60);
 
         jButton8.setText("SUBMIT");
@@ -136,6 +151,8 @@ public class profile extends javax.swing.JFrame {
         });
         getContentPane().add(jButton8);
         jButton8.setBounds(350, 320, 260, 30);
+        jButton6.setBounds(350, 370, 260, 60);
+
 
         buttonGroup1.add(jRadioButton1);
         jRadioButton1.setText("Male");
@@ -207,7 +224,11 @@ public class profile extends javax.swing.JFrame {
         getContentPane().add(jLabel7);
         jLabel7.setBounds(150, 140, 120, 150);
 
+
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/BG frame.png"))); // NOI18N
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/BG_frame.png"))); // NOI18N
+
         jLabel1.setText("jLabel1");
         getContentPane().add(jLabel1);
         jLabel1.setBounds(0, 0, 1050, 560);
@@ -250,12 +271,23 @@ public class profile extends javax.swing.JFrame {
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
         
+
       
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton8ActionPerformed
+
+  
+
+        dispose();
+        Login log=new Login();
+        log.show();
+
+
+    }//GEN-LAST:event_jButton5ActionPerformed
+
 
     /**
      * @param args the command line arguments
@@ -300,7 +332,9 @@ public class profile extends javax.swing.JFrame {
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
+
     private javax.swing.JButton jButton8;
+
     private javax.swing.JCheckBox jCheckBox2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
