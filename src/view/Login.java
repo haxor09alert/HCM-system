@@ -217,7 +217,7 @@ public class Login extends javax.swing.JFrame {
         jPanel1.add(MenuPanel);
         MenuPanel.setBounds(720, 60, 840, 60);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("BG_frame.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BG_frame.png"))); // NOI18N
         jLabel1.setText("jLabel1");
         jPanel1.add(jLabel1);
         jLabel1.setBounds(10, -10, 1680, 960);
@@ -267,12 +267,12 @@ public class Login extends javax.swing.JFrame {
             
     }//GEN-LAST:event_LoginButtonActionPerformed
 
-    // private void SignupButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SignupButtonActionPerformed
-    //     // TODO add your handling code here:
-    //     dispose();
-    //     signup acc=new signup();
-    //     acc.show();
-    // }//GEN-LAST:event_SignupButtonActionPerformed
+    private void SignupButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SignupButtonActionPerformed
+        // TODO add your handling code here:
+        dispose();
+        signup acc=new signup();
+        acc.show();
+    }//GEN-LAST:event_SignupButtonActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
