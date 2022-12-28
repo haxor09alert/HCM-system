@@ -5,6 +5,7 @@
 package view;
 
 import controller.FeesController;
+import java.util.Date;
 import javax.swing.JOptionPane;
 import models.Fees;
 
@@ -19,7 +20,12 @@ public class Bill extends javax.swing.JFrame {
      */
     public Bill() {
         initComponents();
+        
     }
+    
+    
+        
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -47,6 +53,8 @@ public class Bill extends javax.swing.JFrame {
         ADD = new javax.swing.JButton();
         CLEAR = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        BillPage = new javax.swing.JTextArea();
         jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -133,7 +141,7 @@ public class Bill extends javax.swing.JFrame {
         );
 
         getContentPane().add(MenuPanel);
-        MenuPanel.setBounds(700, 120, 878, 60);
+        MenuPanel.setBounds(700, 60, 879, 60);
 
         PanelData.setBackground(new java.awt.Color(153, 0, 153));
 
@@ -166,19 +174,23 @@ public class Bill extends javax.swing.JFrame {
         PanelDataLayout.setHorizontalGroup(
             PanelDataLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PanelDataLayout.createSequentialGroup()
-                .addGroup(PanelDataLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 122, Short.MAX_VALUE)
+                .addGroup(PanelDataLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(PanelDataLayout.createSequentialGroup()
-                        .addContainerGap()
+                        .addGap(5, 5, 5)
                         .addGroup(PanelDataLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel1)
                             .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(TotalLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(PanelDataLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(PanelDataLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(TotalLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(PanelDataLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(PatientNameText)
                     .addComponent(BedNoText)
-                    .addComponent(DoctorNameText, javax.swing.GroupLayout.DEFAULT_SIZE, 330, Short.MAX_VALUE)
+                    .addComponent(DoctorNameText, javax.swing.GroupLayout.DEFAULT_SIZE, 324, Short.MAX_VALUE)
                     .addComponent(TotalText))
                 .addContainerGap())
         );
@@ -198,10 +210,10 @@ public class Bill extends javax.swing.JFrame {
                     .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, 48, Short.MAX_VALUE)
                     .addComponent(DoctorNameText))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(PanelDataLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(TotalLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 48, Short.MAX_VALUE)
-                    .addComponent(TotalText))
-                .addContainerGap(29, Short.MAX_VALUE))
+                .addGroup(PanelDataLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(TotalText, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(TotalLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 48, Short.MAX_VALUE))
+                .addContainerGap(26, Short.MAX_VALUE))
         );
 
         getContentPane().add(PanelData);
@@ -237,10 +249,17 @@ public class Bill extends javax.swing.JFrame {
         getContentPane().add(jButton4);
         jButton4.setBounds(650, 620, 140, 40);
 
+        BillPage.setColumns(20);
+        BillPage.setRows(5);
+        jScrollPane1.setViewportView(BillPage);
+
+        getContentPane().add(jScrollPane1);
+        jScrollPane1.setBounds(970, 270, 390, 390);
+
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/BG_frame.png"))); // NOI18N
         jLabel4.setText("jLabel4");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(-10, -130, 1960, 1070);
+        jLabel4.setBounds(0, 0, 1940, 1120);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -317,7 +336,18 @@ public class Bill extends javax.swing.JFrame {
             }
 
             
-
+            BillPage.setText("-------------------------------------------------------------------------------------------------"+"\n"+"\t"+"HMS BILLS"+"                Contact Email: hms@gmail.com"+"\n" + "-------------------------------------------------------------------------------------------------");
+            
+            
+            Date obj=new Date();
+            String date=obj.toString();
+            
+            BillPage.setText(BillPage.getText()+"\n"+date+"\n\n");
+            BillPage.setText(BillPage.getText()+"Patient Name:"+"\t"+PatientNameText.getText()+"\n");
+            BillPage.setText(BillPage.getText()+"Bed No:"+"\t"+BedNoText.getText()+"\n");
+            BillPage.setText(BillPage.getText()+"Doctor Name:"+"\t"+DoctorNameText.getText()+"\n");
+            BillPage.setText(BillPage.getText()+"Total:"+"\t"+TotalText.getText()+"\n");
+            
             PatientNameText.setText("");
             BedNoText.setText("");
             DoctorNameText.setText("");
@@ -332,10 +362,17 @@ public class Bill extends javax.swing.JFrame {
             BedNoText.setText("");
             DoctorNameText.setText("");
             TotalText.setText("");
+            
+            BillPage.setText("");
     }//GEN-LAST:event_CLEARActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
+        try{
+            BillPage.print();
+        } catch (Exception e){
+            
+        }
         
     }//GEN-LAST:event_jButton4ActionPerformed
 
@@ -379,6 +416,7 @@ public class Bill extends javax.swing.JFrame {
     private javax.swing.JButton AboutUs;
     private javax.swing.JButton Appointment;
     private javax.swing.JTextField BedNoText;
+    private javax.swing.JTextArea BillPage;
     private javax.swing.JButton CLEAR;
     private javax.swing.JTextField DoctorNameText;
     private javax.swing.JPanel MenuPanel;
@@ -393,5 +431,6 @@ public class Bill extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
 }
