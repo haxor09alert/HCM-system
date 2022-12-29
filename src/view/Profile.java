@@ -1,6 +1,9 @@
 package view;
 
+import javax.swing.JOptionPane;
+
 import controller.UserController;
+import models.User;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -241,7 +244,11 @@ public class Profile extends javax.swing.JFrame {
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
         
-        
+        UserController sc=new UserController();
+
+        sc.changestatus(null);
+
+        JOptionPane.showMessageDialog(null,"Logged Out Successfully");
 
         dispose();
         Login log=new Login();
