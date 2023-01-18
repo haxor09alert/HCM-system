@@ -1,5 +1,9 @@
 package view;
 
+import controller.donercontroller;
+import models.donermodel;
+import javax.swing.JOptionPane;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -32,10 +36,10 @@ public class DONERLISTFORM extends javax.swing.JFrame {
         jButton4 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
+        Dname = new javax.swing.JTextField();
+        Dnumber = new javax.swing.JTextField();
+        organ = new javax.swing.JTextField();
+        sn = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -91,37 +95,37 @@ public class DONERLISTFORM extends javax.swing.JFrame {
         getContentPane().add(jPanel2);
         jPanel2.setBounds(480, 10, 454, 60);
 
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        Dname.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                DnameActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField1);
-        jTextField1.setBounds(340, 240, 260, 30);
+        getContentPane().add(Dname);
+        Dname.setBounds(340, 240, 260, 30);
 
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+        Dnumber.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
+                DnumberActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField2);
-        jTextField2.setBounds(340, 280, 260, 30);
+        getContentPane().add(Dnumber);
+        Dnumber.setBounds(340, 280, 260, 30);
 
-        jTextField3.addActionListener(new java.awt.event.ActionListener() {
+        organ.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField3ActionPerformed(evt);
+                organActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField3);
-        jTextField3.setBounds(340, 320, 260, 30);
+        getContentPane().add(organ);
+        organ.setBounds(340, 320, 260, 30);
 
-        jTextField4.addActionListener(new java.awt.event.ActionListener() {
+        sn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField4ActionPerformed(evt);
+                snActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField4);
-        jTextField4.setBounds(340, 200, 260, 30);
+        getContentPane().add(sn);
+        sn.setBounds(340, 200, 260, 30);
 
         jLabel2.setText("Doner Name :");
         getContentPane().add(jLabel2);
@@ -131,15 +135,15 @@ public class DONERLISTFORM extends javax.swing.JFrame {
         getContentPane().add(jLabel3);
         jLabel3.setBounds(240, 280, 140, 30);
 
-        jLabel4.setText("Doantion date and time:");
+        jLabel4.setText("Doantion Organ  :");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(200, 320, 140, 30);
+        jLabel4.setBounds(240, 320, 100, 30);
 
         jLabel5.setText("SN:");
         getContentPane().add(jLabel5);
         jLabel5.setBounds(320, 200, 140, 30);
 
-        jButton1.setText("UPDATE");
+        jButton1.setText("Save");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -148,6 +152,7 @@ public class DONERLISTFORM extends javax.swing.JFrame {
         getContentPane().add(jButton1);
         jButton1.setBounds(340, 360, 260, 30);
 
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/BG frame.png"))); // NOI18N
         jLabel1.setText("jLabel1");
         getContentPane().add(jLabel1);
         jLabel1.setBounds(0, 0, 930, 520);
@@ -159,26 +164,73 @@ public class DONERLISTFORM extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void DnameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DnameActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_DnameActionPerformed
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+    private void DnumberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DnumberActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
+    }//GEN-LAST:event_DnumberActionPerformed
 
-    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
+    private void organActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_organActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField3ActionPerformed
+    }//GEN-LAST:event_organActionPerformed
 
-    private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
+    private void snActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_snActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField4ActionPerformed
+    }//GEN-LAST:event_snActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    String name=Dname.getText();
+    String id=sn.getText();
+    String number=Dnumber.getText();
+    String organs = organ.getText();
+  
+    
+    int a = 0;
+    if (id.equals("")){
+        JOptionPane.showMessageDialog(null, "Sn IS MISSING.");
+            a = 1;
+    }
+    if (name.equals("")){
+        JOptionPane.showMessageDialog(null, "NAME IS MISSING.");
+            a = 1;
+    }
+    if (number.equals("")){
+        JOptionPane.showMessageDialog(null, "Contact IS MISSING.");
+            a = 1;
+    }
+    if (organs.equals("")){
+        JOptionPane.showMessageDialog(null, "Organ IS MISSING.");
+            a = 1;
+    }
+    if (a==0){
+        try{
+            
+            int Id=Integer.parseInt(id);
+            double num=Double.parseDouble(number);
+            donermodel d1= new donermodel(Id, name,num, organs);
+//           drlistcontroller 
+            donercontroller sc = new donercontroller();
+            int insertdoner = sc.insertdetails(d1);
 
+                if (insertdoner > 0) {
+                    System.out.println("data inserted");
+                } else {
+                    System.out.println("Failed to insert data");
+                }
+                JOptionPane.showMessageDialog(null, "VALIDATION SUCCESSFUL");
+                
+            } 
+        catch (Exception e) {
+                // TODO: handle exception
+                JOptionPane.showMessageDialog(null, e);
+                System.out.printf(null,e);
+            }
+            
+    }
+    }
     /**
      * @param args the command line arguments
      */
@@ -213,8 +265,11 @@ public class DONERLISTFORM extends javax.swing.JFrame {
             }
         });
     }
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField Dname;
+    private javax.swing.JTextField Dnumber;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
@@ -226,9 +281,6 @@ public class DONERLISTFORM extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    // End of variables declaration//GEN-END:variables
+    private javax.swing.JTextField organ;
+    private javax.swing.JTextField sn;
 }
