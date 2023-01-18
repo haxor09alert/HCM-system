@@ -5,6 +5,7 @@
 package view;
 
 import database.DbConnection;
+import net.proteanit.sql.DbUtils;
 import java.sql.ResultSet;
 
 /**
@@ -124,6 +125,7 @@ public class drlistuser extends javax.swing.JFrame {
         jButton5.setBounds(530, 550, 160, 27);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/BG frame.png"))); // NOI18N
+        jLabel1.setText("jLabel1");
         getContentPane().add(jLabel1);
         jLabel1.setBounds(0, -90, 1420, 860);
 
@@ -139,16 +141,15 @@ public class drlistuser extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        String query="select doctor_id, CONCAT(fname,' ',lname) as Name,age,department,specialist from doctor";
         
+        DbConnection dbConnection = new DbConnection();
+        ResultSet result = dbConnection.retrieve(query);
+        
+        DTable.setModel(DbUtils.resultSetToTableModel(result));
         
     }//GEN-LAST:event_jButton5ActionPerformed
-public void view(){
-        try {
-            
-        } catch (Exception e) {
-            // TODO: handle exception
-        }
-}
+
     /**
      * @param args the command line arguments
      */
