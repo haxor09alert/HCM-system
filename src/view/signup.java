@@ -55,6 +55,8 @@ public class signup extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMaximumSize(new java.awt.Dimension(2000, 2000));
+        setMinimumSize(new java.awt.Dimension(1200, 780));
         getContentPane().setLayout(null);
 
         jPanel1.setBackground(new java.awt.Color(153, 102, 255));
@@ -155,6 +157,11 @@ public class signup extends javax.swing.JFrame {
         login.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         login.setForeground(new java.awt.Color(255, 255, 255));
         login.setText("Already have an account..");
+        login.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                loginActionPerformed(evt);
+            }
+        });
         getContentPane().add(login);
         login.setBounds(440, 570, 290, 23);
 
@@ -174,6 +181,7 @@ public class signup extends javax.swing.JFrame {
         jLabel3.setBounds(180, 140, 237, 196);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BG frame.png"))); // NOI18N
+        jLabel2.setName(""); // NOI18N
         getContentPane().add(jLabel2);
         jLabel2.setBounds(0, 0, 1160, 675);
 
@@ -250,6 +258,12 @@ public class signup extends javax.swing.JFrame {
 
     }//GEN-LAST:event_signUpButton1ActionPerformed
 
+    private void loginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginActionPerformed
+        dispose();
+        Login pi = new Login();
+        pi.setVisible(true);
+    }//GEN-LAST:event_loginActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -278,10 +292,8 @@ public class signup extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new signup().setVisible(true);
-            }
+        java.awt.EventQueue.invokeLater(() -> {
+            new signup().setVisible(true);
         });
     }
 
